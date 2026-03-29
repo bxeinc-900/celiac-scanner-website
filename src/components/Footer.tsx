@@ -40,7 +40,7 @@ export default function Footer() {
                    <Image src="/app-store.svg" alt="Download on the App Store" width={140} height={40} style={{ height: "40px", width: "auto" }} />
                 </Link>
                 <Link href="#download">
-                   <Image src="/google-play.png" alt="Get it on Google Play" width={160} height={40} style={{ height: "40px", width: "auto" }} />
+                   <Image src="/google-play.svg" alt="Get it on Google Play" width={160} height={40} style={{ height: "40px", width: "auto" }} />
                 </Link>
              </div>
           </div>

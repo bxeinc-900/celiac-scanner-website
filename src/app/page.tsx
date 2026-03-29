@@ -63,7 +63,7 @@ export default function Home() {
                   <Image src="/app-store.svg" alt="Download on the App Store" width={160} height={44} style={{ height: "44px", width: "auto" }} />
                 </Link>
                 <Link href="#download">
-                  <Image src="/google-play.png" alt="Get it on Google Play" width={180} height={44} style={{ height: "44px", width: "auto" }} />
+                  <Image src="/google-play.svg" alt="Get it on Google Play" width={180} height={44} style={{ height: "44px", width: "auto" }} />
                 </Link>
               </div>
               <p style={{ fontSize: "0.9rem", color: "var(--primary)", fontWeight: 700 }}>
