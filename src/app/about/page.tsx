@@ -61,11 +61,11 @@ export default function About() {
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "6rem", letterSpacing: "-0.03em" }}>A few more reasons <span style={{ color: "var(--primary)" }}>to trust us</span></h2>
           <div className="responsive-grid" style={{ gap: "4rem" }}>
-            <div className="card-lifted" style={{ padding: "5rem", textAlign: "left" }}>
+            <div className="card-lifted" style={{ textAlign: "left" }}>
               <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem" }}>We understand you</h3>
               <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>We know how stressful it is to shop for food when you have Celiac disease. Our scanner helps you feel less worried by doing the hard thinking for you.</p>
             </div>
-            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--primary)", color: "white", textAlign: "left" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--primary)", color: "white", textAlign: "left" }}>
               <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem", color: "white" }}>We are honest</h3>
               <p style={{ opacity: 0.8, fontSize: "1.15rem", lineHeight: 1.7 }}>We never guess. If we aren't 100% sure about a food, we will tell you right away. We only want you to eat what is safe.</p>
             </div>

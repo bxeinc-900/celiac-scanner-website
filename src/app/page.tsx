@@ -161,7 +161,7 @@ export default function Home() {
                     ))}
                  </div>
               </div>
-              <div className="card-lifted bg-brand-gradient" style={{ borderRadius: "3rem", padding: "5rem", height: "100%", color: "white" }}>
+              <div className="card-lifted bg-brand-gradient" style={{ borderRadius: "3rem", height: "100%", color: "white" }}>
                  <h3 style={{ fontSize: "3rem", fontWeight: 800, marginBottom: "2rem", color: "white" }}>AI that finds <br/>hidden gluten.</h3>
                  <p style={{ fontSize: "1.2rem", opacity: 0.9, lineHeight: 1.8, marginBottom: "4rem", color: "white" }}>
                     Barcodes are just the start. If a food doesn't have a code, just take a picture of the label. Our AI reads everything to find hidden gluten in thickeners and other tricky ingredients.
@@ -217,7 +217,7 @@ export default function Home() {
       {/* Disclaimers & Personal Note */}
       <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container" style={{ textAlign: "center", maxWidth: "900px" }}>
-           <div className="card-lifted" style={{ padding: "4rem", backgroundColor: "var(--surface-container-highest)" }}>
+           <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-highest)" }}>
               <h4 style={{ fontSize: "1.5rem", fontWeight: 800, marginBottom: "1.5rem" }}>A quick note from our team.</h4>
               <p style={{ fontSize: "1.1rem", opacity: 0.7, lineHeight: 1.7, marginBottom: "2.5rem" }}>
                 Hi! Just a friendly reminder: we aren't doctors. We're app developers who really care about your safety. While our AI is very smart, it's not perfect. Always check the label yourself before you eat something. We built this tool to help you find things you might miss, but you are the final judge of what you eat.

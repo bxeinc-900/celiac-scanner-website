@@ -38,7 +38,7 @@ export default function HowItWorks() {
                 desc: "Get a clear 'Safe', 'Caution', or 'Gluten' result. This is based on real research from food experts." 
               }
             ].map((item, i) => (
-              <div key={i} className="card-lifted" style={{ padding: "4rem", backgroundColor: "var(--surface-container-lowest)" }}>
+              <div key={i} className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)" }}>
                 <span style={{ fontSize: "5rem", fontWeight: 800, opacity: 0.05, display: "block", marginBottom: "-1rem", color: "var(--primary)" }}>{item.step}</span>
                 <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "2rem" }}>{item.title}</h3>
                 <p style={{ opacity: 0.7, lineHeight: "1.7", fontSize: "1.1rem" }}>{item.desc}</p>
@@ -81,11 +81,11 @@ export default function HowItWorks() {
                 </div>
              </div>
              <div style={{ backgroundColor: "var(--surface-container-lowest)", height: "650px", overflow: "hidden", position: "relative" }} className="card-lifted">
-                <div className="bg-brand-gradient" style={{ height: "45%", padding: "5rem", color: "white" }}>
+                <div className="bg-brand-gradient" style={{ height: "45%", color: "white" }}>
                    <h3 style={{ fontSize: "3rem", fontWeight: 800, color: "white", marginBottom: "1rem" }}>New Choices</h3>
                    <p style={{ opacity: 0.8, fontSize: "1.2rem" }}>Pick a new food with help from experts.</p>
                 </div>
-                <div style={{ padding: "5rem" }}>
+                <div style={{ }}>
                    <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
                      {[
                        "Finding the brands you love",

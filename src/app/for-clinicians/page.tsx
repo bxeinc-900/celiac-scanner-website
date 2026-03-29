@@ -20,7 +20,7 @@ export default function ForClinicians() {
       {/* Clinician Portal Feature */}
       <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "10rem", alignItems: "center" }}>
+          <div className="responsive-grid" style={{ alignItems: "center", gap: "6rem" }}>
              <div>
                 <h2 style={{ fontSize: "4.5rem", fontWeight: 800, marginBottom: "3rem", lineHeight: 1.05 }}>A dashboard <br/><span style={{ color: "var(--primary)" }}>for doctors.</span></h2>
                 <div style={{ display: "grid", gap: "3rem", marginTop: "4rem" }}>
@@ -41,7 +41,7 @@ export default function ForClinicians() {
                   ))}
                 </div>
              </div>
-             <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)", height: "700px", padding: "5rem", display: "flex", flexDirection: "column" }}>
+             <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)", height: "700px", display: "flex", flexDirection: "column" }}>
                 <div style={{ flex: 1, backgroundColor: "var(--surface-container-low)", borderRadius: "1.5rem", padding: "3rem" }}>
                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "3rem" }}>
                       <h4 style={{ fontWeight: 800, fontSize: "1.2rem" }}>Patient Profile 01</h4>

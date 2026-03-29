@@ -163,6 +163,13 @@ a {
   background-color: var(--surface-container-lowest);
   border-radius: 1.5rem;
   box-shadow: var(--shadow-ambient);
+  padding: 4rem;
+}
+
+@media (max-width: 768px) {
+  .card-lifted {
+    padding: 2rem;
+  }
 }
 
 /* Layout Utilities */
@@ -200,7 +207,6 @@ a {
   .responsive-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
-    text-align: center;
   }
 }
 
@@ -264,6 +270,16 @@ a {
   height: 2px;
   background-color: var(--on-surface);
   transition: all 0.3s;
+}
+
+.nav-menu-desktop {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 992px) {

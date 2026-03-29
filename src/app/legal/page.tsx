@@ -24,7 +24,7 @@ export default function Legal() {
           <div style={{ display: "grid", gap: "6rem" }}>
             
             {/* Medical Disclaimer Section */}
-            <div id="medical-disclaimer" className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+            <div id="medical-disclaimer" className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)" }}>
                 <div style={{ backgroundColor: "rgba(180, 41, 0, 0.05)", padding: "1.5rem 2.5rem", borderRadius: "1rem", marginBottom: "3rem", display: "inline-block" }}>
                   <span style={{ fontSize: "0.875rem", fontWeight: 800, color: "var(--status-danger)", textTransform: "uppercase", letterSpacing: "0.1em" }}>Important Safety Notice</span>
                 </div>

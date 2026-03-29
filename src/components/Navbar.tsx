@@ -39,7 +39,7 @@ export default function Navbar() {
         </Link>
         
         {/* Desktop Menu */}
-        <div className="nav-menu-desktop" style={{ display: "flex", gap: "2rem", alignItems: "center", fontWeight: 600, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+        <div className="nav-menu-desktop">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>{link.label}</Link>
           ))}

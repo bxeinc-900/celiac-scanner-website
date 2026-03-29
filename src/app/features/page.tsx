@@ -23,7 +23,7 @@ export default function Features() {
         <div className="container">
           <div className="responsive-grid" style={{ gap: "6rem" }}>
             
-            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)" }}>
                <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
                  <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>verified_user</span>
                </div>
@@ -31,7 +31,7 @@ export default function Features() {
                <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>We check 30 different medical groups, like the Mayo Clinic and Celiac.org. We don't guess—we make sure your food is safe before you buy it.</p>
             </div>
 
-            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)" }}>
                <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
                  <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>sync_alt</span>
                </div>
@@ -39,7 +39,7 @@ export default function Features() {
                <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>If a food is not safe to eat, the app will show you other safe choices in the same store aisle. You will always find something great to buy.</p>
             </div>
 
-            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--primary)", color: "white" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--primary)", color: "white" }}>
                <div style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
                  <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "white" }}>photo_camera</span>
                </div>
@@ -47,7 +47,7 @@ export default function Features() {
                <p style={{ opacity: 0.85, fontSize: "1.15rem", lineHeight: 1.7 }}>Take a picture of the ingredients for any food without a label code. Our AI reads the list to find hidden gluten that might be hard for you to see.</p>
             </div>
 
-            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)" }}>
                <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
                  <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>family_restroom</span>
                </div>
@@ -55,7 +55,7 @@ export default function Features() {
                <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>You can share your safe food lists and favorite items with your family. Everyone can see what is safe to buy, so everyone in your home stays healthy.</p>
             </div>
 
-            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)" }}>
                <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
                  <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>restaurant</span>
                </div>
@@ -63,7 +63,7 @@ export default function Features() {
                <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>We use live data to help you find safe restaurants. Our AI reads through recent reviews to find any hidden risks of cross-contact. We give every place a simple Green (Safe) or Amber (Caution) score.</p>
             </div>
 
-            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)" }}>
                <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
                  <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>medical_services</span>
                </div>
@@ -109,7 +109,7 @@ export default function Features() {
       <section className="section-padding">
         <div className="container" style={{ textAlign: "center" }}>
            <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "6rem", letterSpacing: "-0.03em" }}>Why Use <span style={{ color: "var(--primary)" }}>Celiac Scanner?</span></h2>
-           <div className="card-lifted responsive-grid-uneven" style={{ backgroundColor: "var(--surface-container-lowest)", padding: "5rem", gap: "4rem" }}>
+           <div className="card-lifted responsive-grid-uneven" style={{ backgroundColor: "var(--surface-container-lowest)", gap: "4rem" }}>
               <div style={{ textAlign: "left" }}>
                  <h4 style={{ fontSize: "1.75rem", fontWeight: 800, marginBottom: "3rem", textTransform: "uppercase", letterSpacing: "0.1em", opacity: 0.5 }}>App Features</h4>
                  <div style={{ display: "grid", gap: "1.5rem" }}>
@@ -123,7 +123,7 @@ export default function Features() {
                     ))}
                  </div>
               </div>
-              <div style={{ padding: "4rem", backgroundColor: "var(--primary)", color: "white", borderRadius: "2rem", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+              <div style={{ backgroundColor: "var(--primary)", color: "white", borderRadius: "2rem", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
                  <span style={{ fontSize: "5rem", fontWeight: 800, marginBottom: "1rem", letterSpacing: "-0.05em", color: "white" }}>6/6</span>
                  <p style={{ fontSize: "1.25rem", opacity: 0.8, color: "white", fontWeight: 600 }}>Total Safety <br />Score</p>
               </div>
