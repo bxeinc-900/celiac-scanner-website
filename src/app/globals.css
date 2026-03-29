@@ -37,6 +37,7 @@
 .text-gradient {
   background: linear-gradient(135deg, var(--primary) 0%, #8A845B 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -154,4 +155,9 @@ a {
   .section-padding {
     padding: 6rem 0;
   }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
