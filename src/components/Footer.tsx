@@ -17,8 +17,11 @@ export default function Footer() {
           </div>
           
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>Connect</h4>
+            <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>Platform</h4>
             <Link href="/" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Home</Link>
+            <Link href="/how-it-works" style={{ fontSize: "0.875rem", opacity: 0.7 }}>How It Works</Link>
+            <Link href="/features" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Scanner Features</Link>
+            <Link href="/for-clinicians" style={{ fontSize: "0.875rem", opacity: 0.7 }}>For Clinicians</Link>
             <Link href="/about" style={{ fontSize: "0.875rem", opacity: 0.7 }}>About the Guardian</Link>
             <Link href="/legal" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Legal Center</Link>
           </div>

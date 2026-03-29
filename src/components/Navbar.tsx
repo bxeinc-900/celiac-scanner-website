@@ -19,11 +19,14 @@ export default function Navbar() {
         <Image src="/logo.png" alt="Celiac Scanner" width={140} height={60} style={{ objectFit: "contain" }} priority />
       </Link>
       
-      <div style={{ display: "flex", gap: "3rem", alignItems: "center", fontWeight: 600, fontSize: "0.9rem" }}>
+      <div style={{ display: "flex", gap: "2rem", alignItems: "center", fontWeight: 600, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
         <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/legal">Legal Center</Link>
-        <Link href="#download" className="btn-primary" style={{ padding: "0.6rem 1.5rem" }}>
+        <Link href="/how-it-works">How It Works</Link>
+        <Link href="/features">Features</Link>
+        <Link href="/for-clinicians">For Clinicians</Link>
+        <Link href="/about">About Us</Link>
+        <Link href="/legal">Legal</Link>
+        <Link href="#download" className="btn-primary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.75rem" }}>
           Get Started
         </Link>
       </div>
