@@ -19,7 +19,6 @@ export default function Navbar() {
     { href: "/how-it-works", label: "How It Works" },
     { href: "/features", label: "Features" },
     { href: "/about", label: "Our Story" },
-    { href: "/legal", label: "Legal" },
   ];
 
   return (
