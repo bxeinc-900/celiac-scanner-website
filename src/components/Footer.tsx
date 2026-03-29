@@ -12,7 +12,7 @@ export default function Footer() {
               <Image src="/logo.png" alt="Celiac Scanner" width={160} height={70} style={{ objectFit: "contain" }} />
             </Link>
             <p style={{ opacity: 0.6, maxWidth: "300px", fontSize: "0.875rem" }}>
-              The high-end digital concierge for Celiac safety. Built with 30 authoritative sources for clinical precision.
+              A trusted tool for Celiac safety. We use 30 expert sources to help you find safe food.
             </p>
           </div>
           
@@ -20,10 +20,10 @@ export default function Footer() {
             <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>Platform</h4>
             <Link href="/" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Home</Link>
             <Link href="/how-it-works" style={{ fontSize: "0.875rem", opacity: 0.7 }}>How It Works</Link>
-            <Link href="/features" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Scanner Features</Link>
-            <Link href="/for-clinicians" style={{ fontSize: "0.875rem", opacity: 0.7 }}>For Clinicians</Link>
-            <Link href="/about" style={{ fontSize: "0.875rem", opacity: 0.7 }}>About the Guardian</Link>
-            <Link href="/legal" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Legal Center</Link>
+            <Link href="/features" style={{ fontSize: "0.875rem", opacity: 0.7 }}>App Features</Link>
+            <Link href="/for-clinicians" style={{ fontSize: "0.875rem", opacity: 0.7 }}>For Doctors</Link>
+            <Link href="/about" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Our Story</Link>
+            <Link href="/legal" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Legal Rules</Link>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
@@ -47,11 +47,11 @@ export default function Footer() {
         </div>
 
         <div style={{ paddingTop: "3rem", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.75rem", opacity: 0.5 }}>
-          <p>© 2026 Celiac Scanner. All rights reserved. Data verified by 30 authoritative sources.</p>
+          <p>© 2026 Celiac Scanner. All rights reserved. Information checked by 30 expert sources.</p>
           <div style={{ display: "flex", gap: "2rem" }}>
              <Link href="/legal">Privacy</Link>
              <Link href="/legal">Terms</Link>
-             <Link href="/legal">Medical Disclaimer</Link>
+             <Link href="/legal">Health Warning</Link>
           </div>
         </div>
       </div>

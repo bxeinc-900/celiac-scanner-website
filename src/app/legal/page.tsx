@@ -7,12 +7,13 @@ export default function Legal() {
       <Navbar />
       
       {/* Hero Section */}
+      {/* Hero Section */}
       <section className="section-padding" style={{ paddingTop: "14rem" }}>
         <div className="container" style={{ maxWidth: "1000px" }}>
-          <span style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.15em", color: "var(--primary)", display: "block", marginBottom: "1rem" }}>Legal Sanctuary</span>
-          <h1 style={{ fontSize: "5rem", fontWeight: 800, marginBottom: "3rem" }}>Legal & Health Transparency Center.</h1>
+          <span style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.15em", color: "var(--primary)", display: "block", marginBottom: "1rem" }}>Legal & Safety Rules</span>
+          <h1 style={{ fontSize: "5rem", fontWeight: 800, marginBottom: "3rem" }}>Our Safety and <br /><span className="text-gradient">Privacy Rules.</span></h1>
           <p style={{ fontSize: "1.4rem", opacity: 0.7, maxWidth: "700px", lineHeight: "1.8" }}>
-            The Celiac Scanner is an informational tool built for safety. Our legal structure reflects our commitment to clinical transparency and user privacy.
+            The Celiac Scanner is a tool to help you stay safe. These rules show how we keep your information private and how we check our data.
           </p>
         </div>
       </section>
@@ -27,29 +28,29 @@ export default function Legal() {
                 <div style={{ backgroundColor: "rgba(180, 41, 0, 0.05)", padding: "1.5rem 2.5rem", borderRadius: "1rem", marginBottom: "3rem", display: "inline-block" }}>
                   <span style={{ fontSize: "0.875rem", fontWeight: 800, color: "var(--status-danger)", textTransform: "uppercase", letterSpacing: "0.1em" }}>Important Safety Notice</span>
                 </div>
-                <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "2.5rem", color: "var(--on-surface)" }}>Medical Disclaimer</h2>
+                <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "2.5rem", color: "var(--on-surface)" }}>Health Warning</h2>
                 <div style={{ fontSize: "1.2rem", opacity: 0.8, display: "grid", gap: "2rem", lineHeight: "1.8" }}>
-                   <p><strong>Clinical Standard:</strong> The Celiac Scanner is an informational concierge, NOT a medical diagnostic tool or laboratory service. All safety scores and clinical insights are generated through AI-driven auditing of 30+ authoritative data streams.</p>
-                   <p>Users are strictly advised to ALWAYS consult with a qualified healthcare professional before altering their diet or making health-critical safety decisions based on digital scan results.</p>
-                   <p>While we strive for absolute precision using real-time data from the Mayo Clinic, Celiac.org, and FDA manufacturing audits, the Celiac Scanner does not guarantee 100% protection against cross-contamination or labeling errors.</p>
+                   <p><strong>What you should know:</strong> The Celiac Scanner is a helpful tool, but it is NOT a doctor or a lab. Our safety scores come from our AI checking 30 different trusted sources.</p>
+                   <p>You should ALWAYS talk to a doctor before you change what you eat or make big health choices based on our app.</p>
+                   <p>We try our best to be 100% correct by using data from the Mayo Clinic and Celiac.org. But we cannot promise that we will catch every single mistake on a food label.</p>
                 </div>
             </div>
  
             <div style={{ padding: "0 2rem" }}>
                {/* Privacy Policy */}
                <div style={{ marginBottom: "5rem" }}>
-                  <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "2rem" }}>Privacy Policy</h2>
+                  <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "2rem" }}>How We Keep Your Data Safe</h2>
                   <div style={{ fontSize: "1.1rem", opacity: 0.7, display: "grid", gap: "1.5rem", lineHeight: "1.7" }}>
-                     <p>We believe in data sanctuary. Celiac Scanner does not sell your biometric, dietary, or scan history data to third-party marketing firms or insurance providers.</p>
-                     <p>Your scan history is encrypted and used solely to audit the accuracy of our clinical "Trust Engine" and provide personalized safety alerts tailored to your health profile.</p>
+                     <p>We keep your data private. Celiac Scanner does not sell your health or scan information to other companies like marketing or insurance firms.</p>
+                     <p>Your scan history is locked away safely. We only use it to make our app better and to give you safety alerts that help you stay healthy.</p>
                   </div>
                </div>
 
                {/* Terms of Service */}
                <div>
-                  <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "2rem" }}>Terms of Service</h2>
+                  <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "2rem" }}>How to Use Our App</h2>
                   <div style={{ fontSize: "1.1rem", opacity: 0.7, display: "grid", gap: "1.5rem", lineHeight: "1.7" }}>
-                     <p>By initializing a 30-day free trial, you accept our clinical protocols. Your first 6 scans are complimentary to demonstrate the accuracy of the Digital Guardian. Continued usage requires an active safety subscription.</p>
+                     <p>When you start your 30-day free trial, you agree to our rules. Your first 6 scans are free so you can see how well our app works. After that, you will need a subscription to keep using it.</p>
                   </div>
                </div>
             </div>
