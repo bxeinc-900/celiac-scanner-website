@@ -21,9 +21,9 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section - High-End Personal Concierge */}
-      <section className="section-padding" style={{ paddingTop: "14rem", overflow: "hidden" }}>
+      <section className="section-padding" style={{ paddingTop: "10rem", overflow: "hidden" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6rem", alignItems: "center" }}>
+          <div className="responsive-grid" style={{ alignItems: "center" }}>
             <div data-aos="fade-up">
               <span style={{ 
                 fontSize: "1rem", 
@@ -58,7 +58,7 @@ export default function Home() {
                 Hi! We made the Celiac Scanner to help you read food labels. You don't have to worry about "Natural Flavors" or hidden gluten anymore. Just scan the food, and our smart AI handles the hard part for you. 
               </p>
               
-              <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", marginBottom: "3.5rem", alignItems: "center" }}>
+              <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", marginBottom: "3.5rem", alignItems: "center", justifyContent: "inherit" }}>
                 <Link href="#download">
                   <Image src="/app-store.svg" alt="Download on the App Store" width={160} height={44} style={{ height: "44px", width: "auto" }} />
                 </Link>
@@ -110,10 +110,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div style={{ 
-            display: "grid", 
-            gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", 
-            gap: "1.5rem",
+          <div className="responsive-grid-items" style={{ 
             opacity: 0.8
           }}>
             {authoritativeSources.map((source, i) => (
@@ -140,7 +137,7 @@ export default function Home() {
       {/* Logic Tiers - The 3-Tier System */}
       <section className="section-padding">
         <div className="container">
-           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8rem", alignItems: "center" }}>
+           <div className="responsive-grid" style={{ alignItems: "center", gap: "4rem" }}>
               <div>
                  <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "3rem" }}>Three ways <br/>to feel <span style={{ color: "var(--primary)" }}>Safe.</span></h2>
                  <p style={{ fontSize: "1.3rem", opacity: 0.7, marginBottom: "4rem" }}>
@@ -180,7 +177,7 @@ export default function Home() {
       {/* Restaurant Finder Section */}
       <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container">
-           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "8rem", alignItems: "center" }}>
+           <div className="responsive-grid" style={{ alignItems: "center", gap: "4rem" }}>
               <div className="card-lifted shadow-lg" style={{ borderRadius: "3rem", overflow: "hidden", position: "relative", height: "600px" }}>
                  <Image src="/mockups_person/restaurant.png" alt="Restaurant Finder" fill style={{ objectFit: "cover" }} />
               </div>

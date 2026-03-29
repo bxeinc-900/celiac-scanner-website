@@ -21,7 +21,7 @@ export default function Features() {
       {/* Feature Grid */}
       <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "6rem" }}>
+          <div className="responsive-grid" style={{ gap: "6rem" }}>
             
             <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
                <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -83,7 +83,7 @@ export default function Features() {
             <p style={{ fontSize: "1.2rem", opacity: 0.6, maxWidth: "600px", margin: "0 auto" }}>See how we make safety simple, beautiful, and effortless.</p>
           </div>
           
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "4rem" }}>
+          <div className="responsive-grid" style={{ gap: "4rem" }}>
             {[
               { src: "/mockups_person/welcome.png", alt: "Welcome Screen", title: "Warm Welcome", desc: "Start your journey to safety with ease." },
               { src: "/mockups_person/scanner.png", alt: "Scanner Screen", title: "Instant Protection", desc: "Scan any product in seconds to verify safety." },
@@ -109,7 +109,7 @@ export default function Features() {
       <section className="section-padding">
         <div className="container" style={{ textAlign: "center" }}>
            <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "6rem", letterSpacing: "-0.03em" }}>Why Use <span style={{ color: "var(--primary)" }}>Celiac Scanner?</span></h2>
-           <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)", padding: "5rem", display: "grid", gridTemplateColumns: "2.2fr 1fr", gap: "4rem" }}>
+           <div className="card-lifted responsive-grid-uneven" style={{ backgroundColor: "var(--surface-container-lowest)", padding: "5rem", gap: "4rem" }}>
               <div style={{ textAlign: "left" }}>
                  <h4 style={{ fontSize: "1.75rem", fontWeight: 800, marginBottom: "3rem", textTransform: "uppercase", letterSpacing: "0.1em", opacity: 0.5 }}>App Features</h4>
                  <div style={{ display: "grid", gap: "1.5rem" }}>

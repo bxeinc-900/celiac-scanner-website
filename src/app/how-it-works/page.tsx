@@ -20,7 +20,7 @@ export default function HowItWorks() {
       {/* Workflow Steps */}
       <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "4rem" }}>
+          <div className="responsive-grid-3" style={{ gap: "4rem" }}>
             {[
               { 
                 step: "01", 
@@ -51,7 +51,7 @@ export default function HowItWorks() {
       {/* Alternative Discovery - Asymmetric Layout */}
       <section className="section-padding">
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10rem", alignItems: "center" }}>
+          <div className="responsive-grid" style={{ gap: "6rem", alignItems: "center" }}>
              <div>
                 <h2 style={{ fontSize: "4.5rem", fontWeight: 800, marginBottom: "3rem", lineHeight: 1.05 }}>Always find <br/>something <span style={{ color: "var(--primary)" }}>to eat.</span></h2>
                 <p style={{ fontSize: "1.35rem", opacity: 0.8, lineHeight: 1.7, marginBottom: "4rem" }}>
