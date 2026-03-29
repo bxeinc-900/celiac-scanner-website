@@ -18,32 +18,40 @@ export default function Features() {
       </section>
 
       {/* Feature Grid */}
-      <section className="section-padding" style={{ backgroundColor: "white" }}>
+      <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "6rem" }}>
             
-            <div className="card-lifted" style={{ padding: "4rem", borderRadius: "3rem", backgroundColor: "var(--surface)" }}>
-               <span className="material-symbols-outlined" style={{ fontSize: "3.5rem", color: "var(--primary)", marginBottom: "2rem" }}>verified_user</span>
-               <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "1.5rem" }}>Expert-Backed Database</h3>
-               <p style={{ opacity: 0.6, fontSize: "1.1rem" }}>Our Trust Engine is founded on 30 authoritative clinical streams, including Mayo Clinic, Celiac.org, and FDA label audits. We don't guess, we verify.</p>
+            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+               <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                 <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>verified_user</span>
+               </div>
+               <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem" }}>Expert-Backed Database</h3>
+               <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>Our Trust Engine is founded on 30 authoritative clinical streams, including Mayo Clinic, Celiac.org, and FDA label audits. We don't guess, we verify with precision.</p>
             </div>
 
-            <div className="card-lifted" style={{ padding: "4rem", borderRadius: "3rem", backgroundColor: "var(--surface)" }}>
-               <span className="material-symbols-outlined" style={{ fontSize: "3.5rem", color: "var(--primary)", marginBottom: "2rem" }}>sync_alt</span>
-               <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "1.5rem" }}>Instant Replacement</h3>
-               <p style={{ opacity: 0.6, fontSize: "1.1rem" }}>When a product fails the safety scan, Celiac Scanner suggests highly-rated, diet-safe alternatives category-by-category. Never walk away empty-handed.</p>
+            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+               <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                 <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>sync_alt</span>
+               </div>
+               <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem" }}>Instant Replacement</h3>
+               <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>When a product fails the safety scan, Celiac Scanner automatically suggests highly-rated, diet-safe alternatives available in the same aisle. Never leave empty-handed.</p>
             </div>
 
-            <div className="card-lifted" style={{ padding: "4rem", borderRadius: "3rem", backgroundColor: "var(--primary)", color: "white" }}>
-               <span className="material-symbols-outlined" style={{ fontSize: "3.5rem", color: "white", marginBottom: "2rem" }}>photo_camera</span>
-               <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "1.5rem" }}>Digital Guardian AI</h3>
-               <p style={{ opacity: 0.8, fontSize: "1.1rem" }}>Submit a photo of the ingredient list for any product without a barcode. Our AI performs manual de-obfuscation to find hidden gluten triggers.</p>
+            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--primary)", color: "white" }}>
+               <div style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                 <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "white" }}>photo_camera</span>
+               </div>
+               <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem", color: "white" }}>Digital Guardian AI</h3>
+               <p style={{ opacity: 0.85, fontSize: "1.15rem", lineHeight: 1.7 }}>Submit a photo of the ingredient list for any product without a barcode. Our AI performs manual de-obfuscation to find hidden gluten triggers with clinical depth.</p>
             </div>
 
-            <div className="card-lifted" style={{ padding: "4rem", borderRadius: "3rem", backgroundColor: "var(--surface)" }}>
-               <span className="material-symbols-outlined" style={{ fontSize: "3.5rem", color: "var(--primary)", marginBottom: "2rem" }}>family_restroom</span>
-               <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "1.5rem" }}>Family Sync</h3>
-               <p style={{ opacity: 0.6, fontSize: "1.1rem" }}>Share your scan history and 'favorites' list with family or caregivers. One account, total clinical visibility for everyone in your circle.</p>
+            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+               <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                 <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>family_restroom</span>
+               </div>
+               <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem" }}>Family Sync</h3>
+               <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>Share your safety history and 'favorites' with family or caregivers. One account, total clinical visibility for everyone in your circle. No child left un-guarded.</p>
             </div>
 
           </div>
@@ -53,22 +61,24 @@ export default function Features() {
       {/* Comparison Section (Sanitized for Branding) */}
       <section className="section-padding">
         <div className="container" style={{ textAlign: "center" }}>
-           <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "4.5rem" }}>Why Choose <span style={{ color: "var(--primary)" }}>Celiac Scanner?</span></h2>
-           <div style={{ backgroundColor: "white", borderRadius: "4rem", padding: "4rem", display: "grid", gridTemplateColumns: "2fr 1fr", gap: "2rem", border: "1px solid rgba(0,0,0,0.05)" }}>
+           <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "6rem", letterSpacing: "-0.03em" }}>Why Choose <span style={{ color: "var(--primary)" }}>Celiac Scanner?</span></h2>
+           <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)", padding: "5rem", display: "grid", gridTemplateColumns: "2.2fr 1fr", gap: "4rem" }}>
               <div style={{ textAlign: "left" }}>
-                 <h4 style={{ fontSize: "1.5rem", fontWeight: 800, marginBottom: "2rem" }}>Feature Comparison</h4>
+                 <h4 style={{ fontSize: "1.75rem", fontWeight: 800, marginBottom: "3rem", textTransform: "uppercase", letterSpacing: "0.1em", opacity: 0.5 }}>Clinical Specifications</h4>
                  <div style={{ display: "grid", gap: "1.5rem" }}>
                     {["Clinical Source Auditing (30+ Sources)", "AI Photo Label Analysis", "Substitute Engine", "Community Curation", "Clinician Recommendation Engine"].map((f, i) => (
-                      <div key={i} style={{ padding: "1.25rem 2rem", background: "var(--surface)", borderRadius: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                         <span style={{ fontWeight: 600 }}>{f}</span>
-                         <span className="material-symbols-outlined" style={{ color: "var(--primary)" }}>check</span>
+                      <div key={i} style={{ padding: "1.5rem 2.5rem", background: "var(--surface-container-low)", borderRadius: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                         <span style={{ fontWeight: 700, fontSize: "1.1rem", opacity: 0.9 }}>{f}</span>
+                         <div style={{ width: "32px", height: "32px", borderRadius: "50%", backgroundColor: "var(--primary)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <span className="material-symbols-outlined" style={{ color: "white", fontSize: "1.25rem" }}>check</span>
+                         </div>
                       </div>
                     ))}
                  </div>
               </div>
-              <div style={{ padding: "2rem", backgroundColor: "var(--primary)", color: "white", borderRadius: "3rem", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
-                 <span style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "1rem" }}>6/6</span>
-                 <p style={{ fontSize: "1.1rem", opacity: 0.8 }}>Total Clinical <br />Precision Score</p>
+              <div style={{ padding: "4rem", backgroundColor: "var(--primary)", color: "white", borderRadius: "2rem", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+                 <span style={{ fontSize: "5rem", fontWeight: 800, marginBottom: "1rem", letterSpacing: "-0.05em", color: "white" }}>6/6</span>
+                 <p style={{ fontSize: "1.25rem", opacity: 0.8, color: "white", fontWeight: 600 }}>Total Clinical <br />Precision Score</p>
               </div>
            </div>
         </div>

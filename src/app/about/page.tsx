@@ -19,13 +19,13 @@ export default function About() {
       </section>
 
       {/* Trust Engine Sources */}
-      <section className="section-padding" style={{ backgroundColor: "white" }}>
+      <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8rem", alignItems: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10rem", alignItems: "center" }}>
             <div>
-               <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "2rem" }}>Built on a Foundation of <span style={{ color: "var(--primary)" }}>30 Authoritative Sources.</span></h2>
-               <p style={{ fontSize: "1.25rem", opacity: 0.7, marginBottom: "3rem" }}>Trust is earned through evidence. We audit every scan result against a curated list of global clinical leaders.</p>
-               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
+               <h2 style={{ fontSize: "4.5rem", fontWeight: 800, marginBottom: "2.5rem", lineHeight: 1.05 }}>Built on a Foundation of <span style={{ color: "var(--primary)" }}>30 Authoritative Sources.</span></h2>
+               <p style={{ fontSize: "1.35rem", opacity: 0.8, lineHeight: 1.7, marginBottom: "3.5rem" }}>Trust is earned through evidence. We audit every scan result against a curated list of global clinical leaders.</p>
+               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}>
                   {[
                     "Celiac.org Health Database",
                     "Mayo Clinic Dietetics",
@@ -35,18 +35,20 @@ export default function About() {
                     "University Research Centers"
                   ].map((source, i) => (
                     <div key={i} style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-                        <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "1.25rem" }}>verified</span>
-                        <span style={{ fontSize: "0.9rem", fontWeight: 600 }}>{source}</span>
+                        <div style={{ width: "24px", height: "24px", borderRadius: "50%", backgroundColor: "rgba(86, 100, 43, 0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "1rem", fontWeight: 800 }}>check</span>
+                        </div>
+                        <span style={{ fontSize: "1rem", fontWeight: 600, opacity: 0.9 }}>{source}</span>
                     </div>
                   ))}
                </div>
             </div>
-            <div style={{ backgroundColor: "var(--surface)", height: "600px", borderRadius: "3rem", padding: "4rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)", height: "600px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                <div style={{ position: "relative" }}>
-                 <div style={{ width: "300px", height: "300px", border: "2px dashed var(--primary)", borderRadius: "100%", animation: "spin 20s linear infinite" }}></div>
+                 <div style={{ width: "320px", height: "320px", border: "2px dashed var(--outline-variant)", borderRadius: "100%", animation: "spin 20s linear infinite", opacity: 0.3 }}></div>
                  <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
-                   <span style={{ fontSize: "6rem", fontWeight: 800, color: "var(--on-surface)" }}>30+</span>
-                   <span style={{ display: "block", textTransform: "uppercase", fontSize: "0.8rem", fontWeight: 800, opacity: 0.4 }}>Clinical Streams</span>
+                   <span style={{ fontSize: "6.5rem", fontWeight: 800, color: "var(--on-surface)", letterSpacing: "-0.05em" }}>30+</span>
+                   <span style={{ display: "block", textTransform: "uppercase", fontSize: "0.9rem", fontWeight: 800, opacity: 0.5, letterSpacing: "0.1em" }}>Clinical Streams</span>
                  </div>
                </div>
             </div>
@@ -57,15 +59,15 @@ export default function About() {
       {/* Philosophy Section */}
       <section className="section-padding">
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "5rem" }}>The Digital Guardian</h2>
+          <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "6rem", letterSpacing: "-0.03em" }}>The Digital Guardian</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "4rem" }}>
-            <div className="card-lifted" style={{ padding: "4rem", backgroundColor: "white", borderRadius: "3rem", textAlign: "left" }}>
-              <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "1.5rem" }}>Empathetic Precision</h3>
-              <p style={{ opacity: 0.6 }}>We know the anxiety of grocery shopping with Celiac disease. Our scanner is designed to lower your cortisol levels by doing the clinical thinking for you.</p>
+            <div className="card-lifted" style={{ padding: "5rem", textAlign: "left" }}>
+              <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem" }}>Empathetic Precision</h3>
+              <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>We know the clinical anxiety of grocery shopping with Celiac disease. Our scanner is designed to lower your cortisol levels by performing the complex clinical thinking for you.</p>
             </div>
-            <div className="card-lifted" style={{ padding: "4rem", backgroundColor: "var(--primary)", color: "white", borderRadius: "3rem", textAlign: "left" }}>
-              <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "1.5rem" }}>Authoritative Voice</h3>
-              <p style={{ opacity: 0.8 }}>We don't "guess". If we don't have enough data to verify a source from our 30 streams, we tell you. No ambiguity, just safety.</p>
+            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--primary)", color: "white", textAlign: "left" }}>
+              <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem", color: "white" }}>Authoritative Voice</h3>
+              <p style={{ opacity: 0.8, fontSize: "1.15rem", lineHeight: 1.7 }}>We don't "guess". If we don't have enough data to verify a source from our 30+ data streams, we tell you immediately. No ambiguity, just absolute clinical safety.</p>
             </div>
           </div>
         </div>

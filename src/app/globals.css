@@ -1,41 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@600;800&display=swap');
 
 :root {
-  /* Site Surface Colors (Specific to user request) */
-  --surface: #FDFCF0; /* Off-White/Cream */
-  --primary: #B2AC88; /* Sage Green */
-  
-  /* Semantic Tones (Clinical Sanctuary leftovers refined) */
-  --surface-container-low: #F6F5E8;
-  --surface-container-highest: #E7E6D7;
+  /* Site Surface Colors (The Clinical Sanctuary) */
+  --surface: #fbfbe2;
+  --surface-container-low: #f5f5dc;
+  --surface-container-highest: #e4e4cc;
   --surface-container-lowest: #ffffff;
   
   /* Brand Primary CTA */
+  --primary: #56642b;
+  --primary-container: #8a9a5b;
   --on-primary: #ffffff;
   
+  /* Brand Secondary */
+  --secondary-fixed: #dde1ff;
+  --on-secondary-fixed: #001256;
+  
   /* Text */
-  --on-surface: #1C1D17; /* High-trust soft black */
+  --on-surface: #1b1d0e;
   --on-surface-variant: #47483C;
   
   /* Scanner Status Signals */
-  --status-safe: #B2AC88; /* Sage */
+  --status-safe: #56642b;
   --status-caution: #E6A23C;
-  --status-danger: #B42900;
+  --status-danger: #b42900;
   
   /* Elevation Shadow Refined */
   --shadow-ambient: 0 32px 32px -4px rgba(27, 29, 14, 0.06);
+  --outline-variant: #c6c8b8;
   
   /* Fonts */
-  --font-serif: 'DM Serif Display', serif;
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 /* Gradients */
 .bg-brand-gradient {
-  background: linear-gradient(135deg, var(--primary) 0%, #8A845B 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--primary) 0%, #8A845B 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -57,14 +62,16 @@ html, body {
 body {
   background-color: var(--surface);
   color: var(--on-surface);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  font-weight: 800;
   line-height: 1.1;
   color: var(--on-surface);
 }
@@ -76,10 +83,10 @@ a {
 
 /* Updated UI Components */
 .btn-primary {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
   color: var(--on-primary);
   padding: 1rem 2.25rem;
-  border-radius: 9999px;
+  border-radius: 1.5rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
@@ -87,7 +94,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.875rem;
@@ -95,47 +102,49 @@ a {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(178, 172, 136, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(86, 100, 43, 0.4);
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: var(--on-surface);
+  background-color: var(--secondary-fixed);
+  color: var(--on-secondary-fixed);
   padding: 1rem 2.25rem;
-  border-radius: 9999px;
+  border-radius: 1.5rem;
   font-weight: 700;
-  border: 2px solid var(--primary);
+  border: none;
   cursor: pointer;
   transition: all 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.875rem;
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary);
-  color: white;
+  filter: brightness(0.95);
+  transform: translateY(-1px);
 }
 
 /* Artifact Design: Glass Overlays */
 .glass {
-  background: rgba(253, 252, 240, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(245, 245, 220, 0.7); /* surface-container-low */
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 /* Card System */
 .card {
   background-color: var(--surface-container-lowest);
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   padding: 3.5rem;
 }
 
 .card-lifted {
+  background-color: var(--surface-container-lowest);
+  border-radius: 1.5rem;
   box-shadow: var(--shadow-ambient);
 }
 

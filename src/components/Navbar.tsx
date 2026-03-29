@@ -12,8 +12,7 @@ export default function Navbar() {
       padding: "1rem 2rem",
       display: "flex",
       justifyContent: "space-between",
-      alignItems: "center",
-      borderBottom: "1px solid rgba(178, 172, 136, 0.1)"
+      alignItems: "center"
     }}>
       <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
         <Image src="/logo.png" alt="Celiac Scanner" width={140} height={60} style={{ objectFit: "contain" }} priority />

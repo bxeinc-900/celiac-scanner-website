@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="section-padding" style={{ backgroundColor: "white", paddingBottom: "5rem" }}>
+    <footer className="section-padding" style={{ backgroundColor: "var(--surface-container-low)", paddingBottom: "5rem" }}>
       <div className="container">
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "5rem", marginBottom: "5rem" }}>
           <div>
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid rgba(178, 172, 136, 0.1)", paddingTop: "3rem", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.75rem", opacity: 0.5 }}>
+        <div style={{ paddingTop: "3rem", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.75rem", opacity: 0.5 }}>
           <p>© 2026 Celiac Scanner. All rights reserved. Data verified by 30 authoritative sources.</p>
           <div style={{ display: "flex", gap: "2rem" }}>
              <Link href="/legal">Privacy</Link>
