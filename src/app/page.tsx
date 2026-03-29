@@ -58,12 +58,12 @@ export default function Home() {
                 Hey there! We built the Celiac Scanner to take the stress out of ingredient reading. No more squinting at "Natural Flavors"—just scan, and our AI does the clinical heavy lifting for you.
               </p>
               
-              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginBottom: "3.5rem", alignItems: "center" }}>
+              <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", marginBottom: "3.5rem", alignItems: "center" }}>
                 <Link href="#download">
-                  <Image src="/app-store.svg" alt="Download on the App Store" width={160} height={48} style={{ height: "48px", width: "auto" }} />
+                  <Image src="/app-store.svg" alt="Download on the App Store" width={160} height={44} style={{ height: "44px", width: "auto" }} />
                 </Link>
                 <Link href="#download">
-                  <Image src="/google-play.png" alt="Get it on Google Play" width={180} height={54} style={{ height: "54px", width: "auto" }} />
+                  <Image src="/google-play.png" alt="Get it on Google Play" width={180} height={44} style={{ height: "44px", width: "auto" }} />
                 </Link>
               </div>
               <p style={{ fontSize: "0.9rem", color: "var(--primary)", fontWeight: 700 }}>

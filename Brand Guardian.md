@@ -30,3 +30,5 @@ The website must accurately describe the app's functionality to potential users:
 - **Hero Section:** High-end mockup of the app interface on a phone.
 - **Medical Education:** Brief section on Celiac disease and why even 20ppm cross-contact matters.
 - Use DESIGN.md
+
+Reading level; Always write at an 8th grade reading level.
