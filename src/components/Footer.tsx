@@ -34,21 +34,15 @@ export default function Footer() {
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-             <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>Download</h4>
-             <button style={{ backgroundColor: "black", color: "white", padding: "0.75rem 1.5rem", borderRadius: "1rem", display: "flex", alignItems: "center", gap: "1rem", border: "none" }}>
-                <span className="material-symbols-outlined">apple</span>
-                <div style={{ textAlign: "left" }}>
-                   <div style={{ fontSize: "0.6rem", textTransform: "uppercase", opacity: 0.6 }}>Download on the</div>
-                   <div style={{ fontWeight: 800, fontSize: "0.9rem" }}>App Store</div>
-                </div>
-             </button>
-             <button style={{ backgroundColor: "black", color: "white", padding: "0.75rem 1.5rem", borderRadius: "1rem", display: "flex", alignItems: "center", gap: "1rem", border: "none" }}>
-                <span className="material-symbols-outlined">android</span>
-                <div style={{ textAlign: "left" }}>
-                   <div style={{ fontSize: "0.6rem", textTransform: "uppercase", opacity: 0.6 }}>Get it on</div>
-                   <div style={{ fontWeight: 800, fontSize: "0.9rem" }}>Google Play</div>
-                </div>
-             </button>
+             <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1.5rem" }}>Download</h4>
+             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", alignItems: "flex-start" }}>
+                <Link href="#download">
+                   <Image src="/app-store.svg" alt="Download on the App Store" width={140} height={40} style={{ height: "40px", width: "auto" }} />
+                </Link>
+                <Link href="#download">
+                   <Image src="/google-play.png" alt="Get it on Google Play" width={160} height={40} style={{ height: "40px", width: "auto" }} />
+                </Link>
+             </div>
           </div>
         </div>
 

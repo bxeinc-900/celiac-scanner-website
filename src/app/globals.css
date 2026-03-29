@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@600;800&display=swap');
 
 :root {
-  /* Site Surface Colors (The Clinical Sanctuary) */
-  --surface: #fbfbe2;
-  --surface-container-low: #f5f5dc;
-  --surface-container-highest: #e4e4cc;
-  --surface-container-lowest: #ffffff;
+  /* Site Surface Colors (The Clinical Sanctuary - Brand V4) */
+  --surface: #FDFCF0;
+  --surface-container-low: #F6F4E4;
+  --surface-container-highest: #EBE8D8;
+  --surface-container-lowest: #FFFFFF;
   
-  /* Brand Primary CTA */
-  --primary: #56642b;
-  --primary-container: #8a9a5b;
-  --on-primary: #ffffff;
+  /* Brand Primary CTA (Sage Green) */
+  --primary: #B2AC88;
+  --primary-container: #9B956F;
+  --on-primary: #FFFFFF;
   
   /* Brand Secondary */
-  --secondary-fixed: #dde1ff;
-  --on-secondary-fixed: #001256;
+  --secondary-fixed: #E6E9D5;
+  --on-secondary-fixed: #4A4D32;
   
   /* Text */
-  --on-surface: #1b1d0e;
-  --on-surface-variant: #47483C;
+  --on-surface: #2D2E24;
+  --on-surface-variant: #5C5E4E;
   
   /* Scanner Status Signals */
-  --status-safe: #56642b;
+  --status-safe: #B2AC88;
   --status-caution: #E6A23C;
-  --status-danger: #b42900;
+  --status-danger: #B42900;
   
   /* Elevation Shadow Refined */
   --shadow-ambient: 0 32px 32px -4px rgba(27, 29, 14, 0.06);
