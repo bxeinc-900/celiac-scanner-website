@@ -22,7 +22,6 @@ export default function Navbar() {
         <Link href="/">Home</Link>
         <Link href="/how-it-works">How It Works</Link>
         <Link href="/features">Features</Link>
-        <Link href="/for-clinicians">For Doctors</Link>
         <Link href="/about">Our Story</Link>
         <Link href="/legal">Legal</Link>
         <Link href="#download" className="btn-primary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.75rem" }}>

@@ -85,10 +85,11 @@ export default function Features() {
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "4rem" }}>
             {[
-              { src: "/mockups/welcome.png", alt: "Welcome Screen", title: "Warm Welcome", desc: "Start your journey to safety with ease." },
-              { src: "/mockups/scanner.png", alt: "Scanner Screen", title: "Instant Protection", desc: "Scan any product in seconds to verify safety." },
-              { src: "/mockups/profile.png", alt: "Profile Screen", title: "Personalized Care", desc: "Your safety profile, tailored to your needs." },
-              { src: "/mockups/quiz.png", alt: "Quiz Screen", title: "Expert Knowledge", desc: "Learn about celiac safety with interactive quizes." }
+              { src: "/mockups_person/welcome.png", alt: "Welcome Screen", title: "Warm Welcome", desc: "Start your journey to safety with ease." },
+              { src: "/mockups_person/scanner.png", alt: "Scanner Screen", title: "Instant Protection", desc: "Scan any product in seconds to verify safety." },
+              { src: "/mockups_person/restaurant.png", alt: "Restaurant Finder", title: "Dine with No Doubt", desc: "Find safe restaurants using real-time reviews." },
+              { src: "/mockups_person/profile.png", alt: "Profile Screen", title: "Personalized Care", desc: "Your safety profile, tailored to your needs." },
+              { src: "/mockups_person/quiz.png", alt: "Quiz Screen", title: "Expert Knowledge", desc: "Learn about celiac safety with interactive quizes." }
             ].map((img, i) => (
               <div key={i} className="card-lifted" style={{ padding: "0", overflow: "hidden", backgroundColor: "var(--surface-container-lowest)" }}>
                 <div style={{ position: "relative", height: "550px", width: "100%" }}>

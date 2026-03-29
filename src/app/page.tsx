@@ -80,7 +80,7 @@ export default function Home() {
                  overflow: "hidden",
                  aspectRatio: "1/1",
                }}>
-                 <Image src="/mockup.png" alt="Celiac Scanner App" fill style={{ objectFit: "cover" }} priority />
+                 <Image src="/mockups_person/scanner.png" alt="Celiac Scanner App" fill style={{ objectFit: "cover" }} priority />
                </div>
                {/* Floating elements for high-end feel */}
                <div className="card-lifted glass" style={{ position: "absolute", bottom: "10%", left: "-10%", padding: "1.5rem", borderRadius: "1.5rem", backdropFilter: "blur(12px)" }}>
@@ -182,14 +182,7 @@ export default function Home() {
         <div className="container">
            <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "8rem", alignItems: "center" }}>
               <div className="card-lifted shadow-lg" style={{ borderRadius: "3rem", overflow: "hidden", position: "relative", height: "600px" }}>
-                 <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "linear-gradient(180deg, rgba(86,100,43,0.1) 0%, rgba(86,100,43,0.3) 100%)" }}></div>
-                 <div style={{ position: "absolute", bottom: "10%", left: "10%", right: "10%", background: "rgba(255,255,255,0.9)", padding: "2rem", borderRadius: "1.5rem", backdropFilter: "blur(10px)" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
-                       <h4 style={{ fontWeight: 800, fontSize: "1.2rem" }}>Luigi's Gluten-Free Pasta</h4>
-                       <span style={{ backgroundColor: "var(--status-safe)", color: "white", padding: "0.25rem 0.75rem", borderRadius: "0.5rem", fontSize: "0.8rem", fontWeight: 800 }}>SAFE</span>
-                    </div>
-                    <p style={{ fontSize: "0.9rem", opacity: 0.7 }}>"Amazing celiac protocols. The chef even came out to explain their separate kitchen area."</p>
-                 </div>
+                 <Image src="/mockups_person/restaurant.png" alt="Restaurant Finder" fill style={{ objectFit: "cover" }} />
               </div>
               <div>
                  <span style={{ fontSize: "1rem", fontWeight: 800, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.1em", display: "block", marginBottom: "1.5rem" }}>New Feature</span>

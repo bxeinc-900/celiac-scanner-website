@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://celiac-scanner-website.vercel.app/sitemap.xml

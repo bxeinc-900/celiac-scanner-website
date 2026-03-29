@@ -14,12 +14,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Celiac Scanner | Scan with Confidence. Live Gluten-Free.",
-  description: "Official Celiac barcode scanner and gluten-free ingredient checker. Stop guessing with 'Natural Flavors'. Access 30+ authoritative sources.",
-  keywords: ["Celiac barcode scanner", "Gluten-free ingredient checker", "Hidden gluten app", "gluten-free diet", "celiac disease safety"],
+  title: "Celiac Scanner | AI-Powered Gluten-Free Label Review & Safety",
+  description: "The ultimate Celiac Safe Scanner. Use AI to scan ingredient labels for hidden gluten and cross-contact risks. No barcode required. Trusted by clinicians and the Celiac community.",
+  keywords: ["celiac scanner", "gluten free app", "gluten free scanner", "celiac safe food", "hidden gluten finder", "ai food scanner", "cross-contamination warning", "gluten free label reader"],
   openGraph: {
-    title: "Celiac Scanner | Your Digital Guardian",
-    description: "Your Clinical Sanctuary for Celiac safety. Precise, sterile, and warm.",
+    title: "Celiac Scanner | Scan with Confidence. Live Gluten-Free.",
+    description: "Instantly verify if products are safe for Celiacs using advanced AI label analysis. Beyond barcodes.",
     images: ["/logo.png"],
   },
 };
