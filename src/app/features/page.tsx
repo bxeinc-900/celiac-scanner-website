@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -6,7 +7,6 @@ export default function Features() {
     <main style={{ backgroundColor: "var(--surface)", minHeight: "100vh" }}>
       <Navbar />
       
-      {/* Hero Section */}
       {/* Hero Section */}
       <section className="section-padding" style={{ paddingTop: "14rem" }}>
         <div className="container" style={{ maxWidth: "1000px" }}>
@@ -55,6 +55,35 @@ export default function Features() {
                <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>You can share your safe food lists and favorite items with your family. Everyone can see what is safe to buy, so everyone in your home stays healthy.</p>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* App Gallery Section */}
+      <section className="section-padding" style={{ backgroundColor: "var(--surface)" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "8rem" }}>
+            <h2 style={{ fontSize: "4.5rem", fontWeight: 800, marginBottom: "2rem" }}>A Peek Inside the App</h2>
+            <p style={{ fontSize: "1.2rem", opacity: 0.6, maxWidth: "600px", margin: "0 auto" }}>See how we make safety simple, beautiful, and effortless.</p>
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "4rem" }}>
+            {[
+              { src: "/mockups/welcome.png", alt: "Welcome Screen", title: "Warm Welcome", desc: "Start your journey to safety with ease." },
+              { src: "/mockups/scanner.png", alt: "Scanner Screen", title: "Instant Protection", desc: "Scan any product in seconds to verify safety." },
+              { src: "/mockups/profile.png", alt: "Profile Screen", title: "Personalized Care", desc: "Your safety profile, tailored to your needs." },
+              { src: "/mockups/quiz.png", alt: "Quiz Screen", title: "Expert Knowledge", desc: "Learn about celiac safety with interactive quizes." }
+            ].map((img, i) => (
+              <div key={i} className="card-lifted" style={{ padding: "0", overflow: "hidden", backgroundColor: "var(--surface-container-lowest)" }}>
+                <div style={{ position: "relative", height: "550px", width: "100%" }}>
+                  <Image src={img.src} alt={img.alt} fill style={{ objectFit: "cover" }} />
+                </div>
+                <div style={{ padding: "3.5rem" }}>
+                  <h3 style={{ fontSize: "1.75rem", fontWeight: 800, marginBottom: "1rem" }}>{img.title}</h3>
+                  <p style={{ opacity: 0.6, fontSize: "1.1rem" }}>{img.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
