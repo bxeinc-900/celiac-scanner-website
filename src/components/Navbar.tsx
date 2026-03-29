@@ -50,9 +50,9 @@ export default function Navbar() {
 
         {/* Hamburger */}
         <button className="hamburger" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
-          <span style={{ transform: isOpen ? "rotate(45deg) translate(6px, 6px)" : "none" }}></span>
+          <span style={{ transform: isOpen ? "translateY(8px) rotate(45deg)" : "none" }}></span>
           <span style={{ opacity: isOpen ? 0 : 1 }}></span>
-          <span style={{ transform: isOpen ? "rotate(-45deg) translate(5px, -5px)" : "none" }}></span>
+          <span style={{ transform: isOpen ? "translateY(-8px) rotate(-45deg)" : "none" }}></span>
         </button>
       </nav>
 
@@ -65,19 +65,32 @@ export default function Navbar() {
         height: "100vh",
         backgroundColor: "var(--surface)",
         zIndex: 99,
-        display: isOpen ? "flex" : "none",
+        display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         padding: "2rem",
-        transition: "opacity 0.3s"
+        opacity: isOpen ? 1 : 0,
+        pointerEvents: isOpen ? "all" : "none",
+        visibility: isOpen ? "visible" : "hidden",
+        transition: "opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out",
+        transform: isOpen ? "translateY(0)" : "translateY(-20px)",
       }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem", alignItems: "center", textAlign: "center" }}>
+        <div style={{ 
+          display: "flex", 
+          flexDirection: "column", 
+          gap: "2.5rem", 
+          alignItems: "center", 
+          textAlign: "center",
+          transform: isOpen ? "translateY(0)" : "translateY(20px)",
+          transition: "transform 0.5s ease-out 0.1s",
+          opacity: isOpen ? 1 : 0,
+        }}>
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
               href={link.href} 
-              style={{ fontSize: "2rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em" }}
+              style={{ fontSize: "2rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--on-surface)", transition: "color 0.2s" }}
               onClick={() => setIsOpen(false)}
             >
               {link.label}
