@@ -15,17 +15,13 @@ export default function Home() {
         alignItems: "center"
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "2rem" }}>spa</span>
-          <span style={{ 
-            fontFamily: "var(--font-manrope)", 
-            fontWeight: 800, 
-            letterSpacing: "-0.05em",
-            fontSize: "1.5rem",
-            color: "var(--primary)",
-            textTransform: "uppercase"
-          }}>
-            Celiac Scanner
-          </span>
+          <Image 
+            src="/logo.png" 
+            alt="Celiac Scanner Logo" 
+            width={160} 
+            height={70} 
+            style={{ objectFit: "contain" }}
+          />
         </div>
         <div style={{ display: "flex", gap: "1rem" }}>
           <a href="#download" className="btn-primary" style={{ padding: "0.6rem 1.5rem", fontSize: "0.9rem" }}>
@@ -225,17 +221,13 @@ export default function Home() {
       <footer className="surface-alt" style={{ padding: "5rem 0", textAlign: "center" }}>
         <div className="container">
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", justifyContent: "center", marginBottom: "3rem" }}>
-            <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "2rem" }}>spa</span>
-            <span style={{ 
-              fontFamily: "var(--font-manrope)", 
-              fontWeight: 800, 
-              letterSpacing: "-0.05em",
-              fontSize: "1.5rem",
-              color: "var(--primary)",
-              textTransform: "uppercase"
-            }}>
-              Celiac Scanner
-            </span>
+            <Image 
+              src="/logo.png" 
+              alt="Celiac Scanner Logo" 
+              width={140} 
+              height={60} 
+              style={{ objectFit: "contain" }}
+            />
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: "3rem", marginBottom: "3rem", opacity: 0.6, fontSize: "0.875rem", fontWeight: 600 }}>
             <a href="#">Privacy Policy</a>
