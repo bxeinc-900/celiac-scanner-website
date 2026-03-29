@@ -55,6 +55,22 @@ export default function Features() {
                <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>You can share your safe food lists and favorite items with your family. Everyone can see what is safe to buy, so everyone in your home stays healthy.</p>
             </div>
 
+            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+               <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                 <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>restaurant</span>
+               </div>
+               <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem" }}>Dine Out with No Doubt</h3>
+               <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>We use live data to help you find safe restaurants. Our AI reads through recent reviews to find any hidden risks of cross-contact. We give every place a simple Green (Safe) or Amber (Caution) score.</p>
+            </div>
+
+            <div className="card-lifted" style={{ padding: "5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+               <div style={{ backgroundColor: "rgba(86, 100, 43, 0.05)", width: "80px", height: "80px", borderRadius: "1.5rem", marginBottom: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                 <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: "var(--primary)" }}>medical_services</span>
+               </div>
+               <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "2rem" }}>Check Your Meds</h3>
+               <p style={{ opacity: 0.7, fontSize: "1.15rem", lineHeight: 1.7 }}>Gluten can hide in medicines too. We check your prescriptions against the best medical lists to make sure they are safe for you to take. It's one more way we keep you healthy every day.</p>
+            </div>
+
           </div>
         </div>
       </section>

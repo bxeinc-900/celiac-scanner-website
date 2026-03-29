@@ -18,6 +18,13 @@ The website must accurately describe the app's functionality to potential users:
 - **Authoritative Consensus:** Every scan cross-references a database of 30+ sources, including **Celiac.org, Mayo Clinic, Beyond Celiac, Gluten-Free Drugs, and Find Me Gluten Free.**
 - **The 3-Tier System:** Emphasize the 'Safe (Green), Caution (Amber), Contains Gluten (Red)' logic.
 
+Incorporate the 'Reataurant Finder' feature into the 'Features' and 'How It Works' section of the website.
+
+**2a. Feature Description:** > * **Headline:** 'Dine Out Without the Doubt.'
+
+* **Copy:** Use a casual, high-end tone. Explain that the app uses real-time data from **Google Maps,**  **Yelp**, Find Me Glutten Free and other sources, but adds a 'Celiac Intelligence' layer.
+* **The 'Secret Sauce':** Highlight that the AI reads through recent reviews to flag potential cross-contamination risks, giving every restaurant a **Safe (Green)** or **Caution (Amber)** rating.
+
 ## 3. Brand Vibe & Persona
 
 - **Colors:** Sage Green (#B2AC88) and Off-White/Cream (#FDFCF0).

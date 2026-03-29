@@ -177,7 +177,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Medical Education Section */}
+      {/* Restaurant Finder Section */}
+      <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
+        <div className="container">
+           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "8rem", alignItems: "center" }}>
+              <div className="card-lifted shadow-lg" style={{ borderRadius: "3rem", overflow: "hidden", position: "relative", height: "600px" }}>
+                 <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "linear-gradient(180deg, rgba(86,100,43,0.1) 0%, rgba(86,100,43,0.3) 100%)" }}></div>
+                 <div style={{ position: "absolute", bottom: "10%", left: "10%", right: "10%", background: "rgba(255,255,255,0.9)", padding: "2rem", borderRadius: "1.5rem", backdropFilter: "blur(10px)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
+                       <h4 style={{ fontWeight: 800, fontSize: "1.2rem" }}>Luigi's Gluten-Free Pasta</h4>
+                       <span style={{ backgroundColor: "var(--status-safe)", color: "white", padding: "0.25rem 0.75rem", borderRadius: "0.5rem", fontSize: "0.8rem", fontWeight: 800 }}>SAFE</span>
+                    </div>
+                    <p style={{ fontSize: "0.9rem", opacity: 0.7 }}>"Amazing celiac protocols. The chef even came out to explain their separate kitchen area."</p>
+                 </div>
+              </div>
+              <div>
+                 <span style={{ fontSize: "1rem", fontWeight: 800, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.1em", display: "block", marginBottom: "1.5rem" }}>New Feature</span>
+                 <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "2.5rem", lineHeight: 1.1 }}>Dine Out <br/><span className="text-gradient">with No Doubt.</span></h2>
+                 <p style={{ fontSize: "1.3rem", opacity: 0.7, lineHeight: 1.8, marginBottom: "3rem" }}>
+                    We use live data from places like Google Maps and Yelp to help you find safe restaurants. But we do more than that. Our AI reads through recent reviews to find any hidden risks of cross-contact. 
+                 </p>
+                 <div style={{ display: "grid", gap: "1.5rem" }}>
+                    {[
+                      { icon: "map", text: "Finds the best-rated safe spots near you." },
+                      { icon: "reviews", text: "AI checks reviews for real safety words." },
+                      { icon: "verified", text: "We give every place a Green or Amber score." }
+                    ].map((item, i) => (
+                      <div key={i} style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+                         <div style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "rgba(86, 100, 43, 0.05)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                            <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "1.2rem" }}>{item.icon}</span>
+                         </div>
+                         <p style={{ fontWeight: 600, opacity: 0.8 }}>{item.text}</p>
+                      </div>
+                    ))}
+                 </div>
+              </div>
+           </div>
+        </div>
+      </section>
       <section className="section-padding" style={{ backgroundColor: "var(--on-surface)", color: "white" }}>
         <div className="container" style={{ maxWidth: "800px", textAlign: "center" }}>
            <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "2.5rem", color: "white" }}>Why one crumb matters.</h2>
