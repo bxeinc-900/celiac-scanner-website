@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope, Inter } from "next/font/google";
+import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const dmSerif = DM_Serif_Display({
+  weight: "400",
+  variable: "--font-dm-serif",
   subsets: ["latin"],
 });
 
@@ -13,8 +14,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Celiac Scanner | Your High-End Health Concierge",
-  description: "A clinical sanctuary for Celiac safety. Precise, sterile, and warm. Download the Celiac Safe Scanner app today.",
+  title: "Celiac Scanner | Scan with Confidence. Live Gluten-Free.",
+  description: "Official Celiac barcode scanner and gluten-free ingredient checker. Stop guessing with 'Natural Flavors'. Access 30+ authoritative sources.",
+  keywords: ["Celiac barcode scanner", "Gluten-free ingredient checker", "Hidden gluten app", "gluten-free diet", "celiac disease safety"],
+  openGraph: {
+    title: "Celiac Scanner | Your Digital Guardian",
+    description: "Your Clinical Sanctuary for Celiac safety. Precise, sterile, and warm.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({
@@ -27,11 +34,11 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${manrope.variable} ${inter.variable}`} style={{ 
+      <body className={`${dmSerif.variable} ${inter.variable}`} style={{ 
         fontFamily: "var(--font-inter), sans-serif",
       }}>
         <style dangerouslySetInnerHTML={{ __html: `
-          h1, h2, h3, h4, h5, h6 { font-family: var(--font-manrope), sans-serif; }
+          h1, h2, h3, h4, h5, h6 { font-family: var(--font-dm-serif), serif; }
         `}} />
         {children}
       </body>

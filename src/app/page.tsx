@@ -1,242 +1,136 @@
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main style={{ backgroundColor: "var(--surface)", minHeight: "100vh" }}>
-      {/* Navigation */}
-      <nav className="glass" style={{ 
-        position: "fixed", 
-        top: 0, 
-        width: "100%", 
-        zIndex: 50, 
-        padding: "1.25rem 2rem",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center"
-      }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <Image 
-            src="/logo.png" 
-            alt="Celiac Scanner Logo" 
-            width={160} 
-            height={70} 
-            style={{ objectFit: "contain" }}
-          />
-        </div>
-        <div style={{ display: "flex", gap: "1rem" }}>
-          <a href="#download" className="btn-primary" style={{ padding: "0.6rem 1.5rem", fontSize: "0.9rem" }}>
-            Get the App
-          </a>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="section-padding" style={{ paddingTop: "12rem" }}>
-        <div className="container" style={{ textAlign: "center", maxWidth: "900px" }}>
+      <section className="section-padding" style={{ paddingTop: "14rem" }}>
+        <div className="container" style={{ textAlign: "center", maxWidth: "1000px" }}>
           <h1 style={{ 
-            fontSize: "clamp(2.5rem, 5vw, 4.5rem)", 
+            fontSize: "clamp(3rem, 6vw, 5.5rem)", 
             fontWeight: 800, 
-            marginBottom: "1.5rem",
+            marginBottom: "2rem",
             color: "var(--on-surface)"
           }}>
-            Your High-End <span className="text-gradient">Health Editorial.</span> 
+            Scan with Confidence. <br/><span className="text-gradient">Live Gluten-Free.</span> 
           </h1>
           <p style={{ 
-            fontSize: "1.25rem", 
+            fontSize: "1.35rem", 
             color: "var(--on-surface)", 
             opacity: 0.8,
-            maxWidth: "600px",
-            margin: "0 auto 3rem auto",
-            lineHeight: "1.6"
+            maxWidth: "700px",
+            margin: "0 auto 4rem auto",
+            lineHeight: "1.7"
           }}>
-            Experience the "Clinical Sanctuary"—a design philosophy that blends medical precision with the warmth of wellness. Scan, verify, and live with confidence.
+            Stop guessing with "Natural Flavors". Our high-end barcode scanner uses 30 authoritative sources to protect your health with clinical precision.
           </p>
           
-          <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap", marginBottom: "4rem" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginBottom: "6rem" }}>
             <button className="btn-primary">
               <span className="material-symbols-outlined">apple</span>
-              Download for iOS
+              App Store Trial
             </button>
             <button className="btn-secondary">
               <span className="material-symbols-outlined">android</span>
-              Get for Android
+              Play Store Trial
             </button>
           </div>
 
-          {/* Hero App Mockup */}
-          <div style={{ 
+          <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--primary)", marginTop: "-2.5rem", marginBottom: "5rem" }}>
+            Start your 30-day free trial. Your first 6 scans are on us.
+          </p>
+
+          {/* Scanner Mockup (3-tier) */}
+          <div className="card-lifted bg-brand-gradient" style={{ 
             position: "relative",
             margin: "0 auto",
-            maxWidth: "800px",
-            borderRadius: "3rem",
-            overflow: "hidden",
-            boxShadow: "var(--shadow-ambient)",
-            backgroundColor: "var(--surface-container-lowest)",
-            padding: "2rem"
+            maxWidth: "900px",
+            borderRadius: "4rem",
+            padding: "4rem",
+            color: "white"
           }}>
-             {/* Mocking the App UI inside the mockup */}
-             <div className="surface-alt" style={{ borderRadius: "2rem", padding: "3rem", textAlign: "left" }}>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: "3rem" }}>
-                  <div style={{ position: "relative", textAlign: "center" }}>
-                    <svg style={{ width: "240px", height: "120px" }} viewBox="0 0 100 50">
-                      <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="var(--surface-container-highest)" strokeLinecap="round" strokeWidth="8" />
-                      <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="var(--primary)" strokeDasharray="125.6" strokeDashoffset="0" strokeLinecap="round" strokeWidth="8" />
-                    </svg>
-                    <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", paddingBottom: "10px" }}>
-                      <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "3rem", fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                      <span style={{ fontFamily: "var(--font-manrope)", fontWeight: 800, fontSize: "1.5rem", color: "var(--primary)", textTransform: "uppercase" }}>Safe to Eat</span>
-                    </div>
+             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
+                {[
+                  { status: "Safe", icon: "check_circle", color: "#B2AC88", text: "Trusted for Celiac" },
+                  { status: "Caution", icon: "warning", color: "#E6A23C", text: "Cross-Contamination" },
+                  { status: "Gluten", icon: "cancel", color: "#B42900", text: "Definite Exposure" }
+                ].map((tier, i) => (
+                  <div key={i} className="glass" style={{ borderRadius: "2.5rem", padding: "2.5rem", border: "1px solid rgba(255,255,255,0.1)" }}>
+                    <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: tier.color, marginBottom: "1.5rem", fontVariationSettings: "'FILL' 1" }}>
+                        {tier.icon}
+                    </span>
+                    <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "0.5rem", color: tier.color }}>{tier.status}</h3>
+                    <p style={{ opacity: 0.8, color: i === 0 ? "black" : "white" }}>{tier.text}</p>
                   </div>
-                </div>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
-                  <div>
-                    <h3 style={{ fontSize: "1.75rem", fontWeight: 700, marginBottom: "0.5rem" }}>Artisan Almond Crackers</h3>
-                    <p style={{ opacity: 0.6, marginBottom: "2rem" }}>Nature's Harvest Co.</p>
-                    <div style={{ backgroundColor: "var(--primary-fixed-dim)", padding: "1.5rem", borderRadius: "1.5rem", display: "inline-block" }}>
-                      <span style={{ fontSize: "2rem", fontWeight: 900, color: "var(--on-surface)", display: "block" }}>100%</span>
-                      <span style={{ fontSize: "0.75rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em" }}>Safety Score</span>
-                    </div>
-                  </div>
-                  <div style={{ backgroundColor: "var(--surface-container-lowest)", padding: "2rem", borderRadius: "2rem" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
-                      <span className="material-symbols-outlined" style={{ color: "var(--primary)" }}>menu_book</span>
-                      <h4 style={{ fontWeight: 700 }}>Clinical Insights</h4>
-                    </div>
-                    <p style={{ fontSize: "0.875rem", fontStyle: "italic", opacity: 0.8 }}>
-                      "Ingredients like Almond Flour and Sea Salt are naturally gluten-free and safe for individuals with Celiac disease."
-                    </p>
-                    <p style={{ fontSize: "0.65rem", fontWeight: 800, textTransform: "uppercase", marginTop: "1rem", color: "var(--primary)" }}>— Source: Celiac.org Health Database</p>
-                  </div>
-                </div>
+                ))}
              </div>
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="surface-alt section-padding">
+      {/* The Hook Section */}
+      <section className="section-padding" style={{ backgroundColor: "white" }}>
         <div className="container">
-          <div style={{ marginBottom: "5rem", textAlign: "center" }}>
-            <h2 style={{ fontSize: "3rem", fontWeight: 800, marginBottom: "1.5rem" }}>The Sanctuary Standard</h2>
-            <p style={{ opacity: 0.7, maxWidth: "600px", margin: "0 auto" }}>Built on three pillars of trust: Precision, Warmth, and Authority.</p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8rem", alignItems: "center" }}>
+            <div style={{ backgroundColor: "var(--surface)", height: "600px", borderRadius: "3rem", padding: "4rem", position: "relative" }}>
+                 <div style={{ position: "absolute", top: "2rem", left: "2rem", fontSize: "10rem", fontWeight: 800, opacity: 0.05, lineHeight: 1 }}>"</div>
+                 <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginTop: "4rem", marginBottom: "2.5rem" }}>"Natural Flavors" shouldn't be a guessing game.</h2>
+                 <p style={{ fontSize: "1.25rem", opacity: 0.7, lineHeight: 1.8 }}>
+                    Hidden gluten lurks in the most unexpected places—from thickeners to flavorings. Without clinical verification, every shopping trip is a risk. We built the Celiac Scanner to be your digital guardian.
+                 </p>
+                 <div style={{ marginTop: "4rem", display: "flex", gap: "2rem" }}>
+                    <div className="btn-primary" style={{ backgroundColor: "white", color: "var(--on-surface)", border: "1px solid rgba(0,0,0,0.1)" }}>
+                        Read the Science
+                    </div>
+                 </div>
+            </div>
+            <div>
+              <h2 style={{ fontSize: "4.5rem", fontWeight: 800, marginBottom: "2.5rem", lineHeight: 1.1 }}>Precision Built for <span style={{ color: "var(--primary)" }}>Celiac Safety.</span></h2>
+              <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+                {[
+                  "30+ Authoritative Sources (Mayo Clinic, Celiac.org)",
+                  "Instant Ingredient De-Obfuscation",
+                  "Cross-Contamination Threshold Mapping",
+                  "Digital Sanctuary User Experience"
+                ].map((point, i) => (
+                  <div key={i} style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+                    <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontWeight: 800 }}>verified</span>
+                    <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>{point}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2.5rem" }}>
+      {/* Trust Engine Section */}
+      <section className="section-padding">
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "5rem" }}>The Trust Engine</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "3rem" }}>
             {[
-              { 
-                icon: "barcode_scanner", 
-                title: "Precision Scanning", 
-                desc: "AI-powered analysis that detects hidden gluten in seconds. No more guesswork at the grocery store." 
-              },
-              { 
-                icon: "verified_user", 
-                title: "Clinical Trust", 
-                desc: "Every result is backed by the Celiac.org health database and real-time clinical insights." 
-              },
-              { 
-                icon: "history", 
-                title: "Personal History", 
-                desc: "Keep a curated 'Safe List' of your favorite finds and cross-contamination notes." 
-              }
-            ].map((feature, i) => (
-              <div key={i} className="card card-lifted">
-                <div style={{ 
-                  backgroundColor: "var(--primary-fixed-dim)", 
-                  width: "60px", 
-                  height: "60px", 
-                  borderRadius: "1rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "2rem"
-                }}>
-                  <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "1.8rem" }}>{feature.icon}</span>
+              { img: "mayo.png", name: "Mayo Clinic", text: "Clinical dietary data for verified Celiac guidance." },
+              { img: "celiac.png", name: "Celiac.org", text: "The foundation of our gluten-free safety database." },
+              { img: "fda.png", name: "FDA Data", text: "Real-time auditing of ingredient manufacturing labels." }
+            ].map((source, i) => (
+              <div key={i} className="card-lifted" style={{ padding: "3rem", borderRadius: "2rem", backgroundColor: "white" }}>
+                <div style={{ backgroundColor: "var(--surface)", width: "80px", height: "80px", borderRadius: "100%", margin: "0 auto 2rem auto", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "2rem" }}>account_balance</span>
                 </div>
-                <h3 style={{ fontSize: "1.5rem", fontWeight: 800, marginBottom: "1rem" }}>{feature.title}</h3>
-                <p style={{ opacity: 0.7, lineHeight: "1.7" }}>{feature.desc}</p>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 800, marginBottom: "1rem" }}>{source.name}</h3>
+                <p style={{ opacity: 0.6, fontSize: "0.875rem" }}>{source.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="section-padding" style={{ backgroundColor: "var(--on-surface)", color: "var(--surface)" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
-          <div>
-            <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "2rem", lineHeight: "1.1" }}>Medical Laboratory, <br/>Wellness Warmth.</h2>
-            <p style={{ fontSize: "1.25rem", opacity: 0.7, marginBottom: "3rem", lineHeight: "1.8" }}>
-              We believe health data shouldn't feel scary. Our "No-Line" design philosophy uses background color shifts instead of harsh borders, creating a breathing space that feels like a high-end wellness editorial.
-            </p>
-            <div style={{ display: "flex", gap: "3rem" }}>
-              <div>
-                <span style={{ fontSize: "3rem", fontWeight: 900, display: "block" }}>10k+</span>
-                <span style={{ opacity: 0.5, textTransform: "uppercase", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.1em" }}>Weekly Scans</span>
-              </div>
-              <div>
-                <span style={{ fontSize: "3rem", fontWeight: 900, display: "block" }}>99%</span>
-                <span style={{ opacity: 0.5, textTransform: "uppercase", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.1em" }}>Accuracy Rate</span>
-              </div>
-            </div>
-          </div>
-          <div style={{ 
-            backgroundColor: "var(--surface-container-highest)", 
-            height: "500px", 
-            borderRadius: "4rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            transform: "rotate(3deg)",
-            boxShadow: "0 50px 100px -20px rgba(0,0,0,0.5)"
-          }}>
-             <span className="material-symbols-outlined" style={{ fontSize: "10rem", color: "var(--primary)", opacity: 0.2 }}>spa</span>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="download" className="section-padding" style={{ textAlign: "center" }}>
-        <div className="container">
-          <div className="card-lifted bg-signature-gradient" style={{ 
-            padding: "5rem", 
-            borderRadius: "4rem",
-            color: "white"
-          }}>
-            <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "1.5rem" }}>Ready to find your sanctuary?</h2>
-            <p style={{ fontSize: "1.25rem", marginBottom: "3.5rem", opacity: 0.9 }}>Join the community of Celiac warriors scanning for a safer life.</p>
-            <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
-              <button className="btn-secondary" style={{ backgroundColor: "white", color: "black", border: "none" }}>
-                App Store
-              </button>
-              <button className="btn-secondary" style={{ backgroundColor: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.2)" }}>
-                Google Play
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="surface-alt" style={{ padding: "5rem 0", textAlign: "center" }}>
-        <div className="container">
-          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", justifyContent: "center", marginBottom: "3rem" }}>
-            <Image 
-              src="/logo.png" 
-              alt="Celiac Scanner Logo" 
-              width={140} 
-              height={60} 
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-          <div style={{ display: "flex", justifyContent: "center", gap: "3rem", marginBottom: "3rem", opacity: 0.6, fontSize: "0.875rem", fontWeight: 600 }}>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Clinical Support</a>
-          </div>
-          <p style={{ opacity: 0.4, fontSize: "0.75rem" }}>© 2026 Celiac Sanctuary. All rights reserved. Data provided by Celiac.org Health Database.</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
