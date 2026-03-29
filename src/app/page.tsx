@@ -4,23 +4,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const authoritativeSources = [
-    "Celiac.org", "Mayo Clinic", "Beyond Celiac", "Gluten-Free Drugs", 
-    "Find Me Gluten Free", "FDA Database", "NHS Health", "Celiac Canada", 
-    "Gluten Intolerance Group", "Schär Safety Lab", "GFCO", "AOECS",
-    "USDA FoodData", "EFSA", "Coeliac UK", "National Institute of Health",
-    "University of Chicago Celiac Center", "Children's National Hospital",
-    "Harvard Health", "Massachusetts General Hospital", "Stanford Medicine",
-    "Cleveland Clinic", "Johns Hopkins GI", "Columbia Celiac Center",
-    "UCSD Celiac Program", "Vanderbilt Celiac Center", "EGA", "Health Canada",
-    "FSANZ", "Codex Alimentarius", "Digestion SOS", "Kitchen Sanctuary"
-  ];
-
   return (
     <main style={{ backgroundColor: "var(--surface)", minHeight: "100vh" }}>
       <Navbar />
 
-      {/* Hero Section - High-End Personal Concierge */}
+      {/* Hero Section */}
       <section className="section-padding" style={{ paddingTop: "10rem", overflow: "hidden" }}>
         <div className="container">
           <div className="responsive-grid" style={{ alignItems: "center" }}>
@@ -34,7 +22,7 @@ export default function Home() {
                 display: "block",
                 marginBottom: "1.5rem"
               }}>
-                The Digital Guardian
+                Welcome to Celiac Scanner
               </span>
               <h1 style={{ 
                 fontSize: "clamp(3rem, 6vw, 4.5rem)", 
@@ -44,18 +32,29 @@ export default function Home() {
                 letterSpacing: "-0.04em",
                 lineHeight: 1.05
               }}>
-                Shop for food <br/>like you have <br/><span className="text-gradient">an expert in your pocket.</span> 
+                Your Digital Guardian <br/>for <span className="text-gradient">Gluten-Free</span> Living.
               </h1>
               <p style={{ 
-                fontSize: "1.35rem", 
+                fontSize: "1.25rem", 
                 color: "var(--on-surface)", 
                 opacity: 0.85,
                 maxWidth: "600px",
-                marginBottom: "4.5rem",
+                marginBottom: "2rem",
+                lineHeight: "1.7",
+                fontWeight: 600
+              }}>
+                The only AI-powered safety ecosystem that cross-references 30+ medical authorities in real-time.
+              </p>
+              <p style={{ 
+                fontSize: "1.05rem", 
+                color: "var(--on-surface)", 
+                opacity: 0.75,
+                maxWidth: "600px",
+                marginBottom: "3rem",
                 lineHeight: "1.7",
                 fontWeight: 400
               }}>
-                Hi! We made the Celiac Scanner to help you read food labels. You don't have to worry about "Natural Flavors" or hidden gluten anymore. Just scan the food, and our smart AI handles the hard part for you. 
+                Living with Celiac Disease or severe gluten sensitivity isn't a "lifestyle choice"—it's a daily medical necessity. Designed by developers who understand the high-stakes reality of a strict gluten-free diet, Celiac Scanner is the casual, approachable, tech-savvy friend you need in your pocket.
               </p>
               
               <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", marginBottom: "3.5rem", alignItems: "center", justifyContent: "inherit" }}>
@@ -66,9 +65,6 @@ export default function Home() {
                   <Image src="/google-play.svg" alt="Get it on Google Play" width={180} height={44} style={{ height: "44px", width: "auto" }} />
                 </Link>
               </div>
-              <p style={{ fontSize: "0.9rem", color: "var(--primary)", fontWeight: 700 }}>
-                Try it free for 30 days. Your first 6 scans are totally free!
-              </p>
             </div>
             
             <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
@@ -100,36 +96,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Authority Section - The 32 Clinical Streams */}
+      {/* Why Celiac Scanner is Different Section */}
       <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "6rem" }}>
-            <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "2rem" }}>You deserve to feel safe.</h2>
+            <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "2rem" }}>Why we're <span style={{ color: "var(--primary)" }}>Different.</span></h2>
             <p style={{ fontSize: "1.25rem", opacity: 0.7, maxWidth: "700px", margin: "0 auto" }}>
-              Every time you scan, we check 30 different trusted sources. We make sure the best medical experts agree that your food is safe to eat.
+              Whether you are grocery shopping or dining out, deciphering "natural flavors" shouldn't be a guessing game.
             </p>
           </div>
-          
-          <div className="responsive-grid-items" style={{ 
-            opacity: 0.8
-          }}>
-            {authoritativeSources.map((source, i) => (
-              <div key={i} style={{ 
-                padding: "1.5rem", 
-                textAlign: "center", 
-                backgroundColor: "var(--surface-container-lowest)", 
-                borderRadius: "1rem",
-                fontSize: "0.85rem",
-                fontWeight: 700,
-                color: "var(--on-surface-variant)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                minHeight: "80px"
-              }}>
-                {source}
-              </div>
-            ))}
+
+          <div className="responsive-grid" style={{ gap: "3rem", marginBottom: "4rem" }}>
+             {/* 1. Multimodal AI */}
+             <div className="card-lifted" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                <div style={{ width: "60px", height: "60px", borderRadius: "50%", backgroundColor: "rgba(178, 172, 136, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px" }}>
+                   <span className="material-symbols-outlined" style={{ fontSize: "2rem", color: "var(--primary)" }}>smart_toy</span>
+                </div>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>1. Multimodal AI Label Intelligence</h3>
+                <p style={{ opacity: 0.7, lineHeight: 1.7 }}>
+                  Traditional barcode scanners rely on outdated databases. Celiac Scanner uses <strong>Gemini 3 Multimodal AI</strong> to actually "read" the physical ingredient list. It easily identifies hidden gluten sources like Malt, Brewer's Yeast, and Yeast Extract that often hide behind generic barcodes.
+                </p>
+             </div>
+
+             {/* 2. Trust 30 */}
+             <div className="card-lifted" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                <div style={{ width: "60px", height: "60px", borderRadius: "50%", backgroundColor: "rgba(178, 172, 136, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px" }}>
+                   <span className="material-symbols-outlined" style={{ fontSize: "2rem", color: "var(--primary)" }}>verified_user</span>
+                </div>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>2. The "Trust 30" Database Consensus</h3>
+                <p style={{ opacity: 0.7, lineHeight: 1.7 }}>
+                  We don't just guess if an ingredient is safe. Every scan triggers a real-time cross-reference against <strong>30+ authoritative sources</strong>, including the Celiac Disease Foundation, Mayo Clinic, and Columbia University. You get a verdict backed by the world's leading experts.
+                </p>
+             </div>
+             
+             {/* 4. Amazon Safe Swap */}
+             <div className="card-lifted" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                <div style={{ width: "60px", height: "60px", borderRadius: "50%", backgroundColor: "rgba(178, 172, 136, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px" }}>
+                   <span className="material-symbols-outlined" style={{ fontSize: "2rem", color: "var(--primary)" }}>swap_horiz</span>
+                </div>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>4. Amazon "Safe-Swap" Integration</h3>
+                <p style={{ opacity: 0.7, lineHeight: 1.7 }}>
+                  Did you scan a product that isn't safe? The app automatically finds a <strong>Certified Gluten-Free alternative on Amazon</strong>. With one tap, you can order a safe version of exactly what you were looking for.
+                </p>
+             </div>
+
+             {/* 5. Safe Dining Hub */}
+             <div className="card-lifted" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                <div style={{ width: "60px", height: "60px", borderRadius: "50%", backgroundColor: "rgba(178, 172, 136, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px" }}>
+                   <span className="material-symbols-outlined" style={{ fontSize: "2rem", color: "var(--primary)" }}>restaurant</span>
+                </div>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>5. Safe Dining Hub</h3>
+                <p style={{ opacity: 0.7, lineHeight: 1.7 }}>
+                  Our restaurant finder uses AI to <strong>scan Yelp and Google Maps reviews for crucial keywords like "cross-contamination" or "knowledgeable staff,"</strong> helping you discover dedicated gluten-free kitchens and highly-vetted local spots instantly.
+                </p>
+             </div>
           </div>
         </div>
       </section>
@@ -138,93 +158,85 @@ export default function Home() {
       <section className="section-padding">
         <div className="container">
            <div className="responsive-grid" style={{ alignItems: "center", gap: "4rem" }}>
-              <div>
-                 <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "3rem" }}>Three ways <br/>to feel <span style={{ color: "var(--primary)" }}>Safe.</span></h2>
-                 <p style={{ fontSize: "1.3rem", opacity: 0.7, marginBottom: "4rem" }}>
-                    We don't guess. We give you clear answers so you can buy food without any worry.
-                 </p>
-                 <div style={{ display: "grid", gap: "2rem" }}>
-                    {[
-                      { status: "Safe", color: "var(--status-safe)", text: "Our AI and experts found nothing to worry about. Enjoy your meal!" },
-                      { status: "Caution", color: "var(--status-caution)", text: "This food might have some gluten from the factory. A dietitian hasn't cleared it yet." },
-                      { status: "Gluten", color: "var(--status-danger)", text: "We found ingredients with gluten. Stay away from this one." }
-                    ].map((step, i) => (
-                      <div key={i} className="card-lifted" style={{ padding: "2.5rem", display: "flex", gap: "2rem", alignItems: "center" }}>
-                        <div style={{ width: "60px", height: "60px", borderRadius: "50%", backgroundColor: step.color, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                           <span className="material-symbols-outlined" style={{ color: "white", fontSize: "2rem" }}>shield</span>
-                        </div>
-                        <div>
-                           <h4 style={{ fontSize: "1.5rem", fontWeight: 800, color: step.color }}>{step.status}</h4>
-                           <p style={{ opacity: 0.6 }}>{step.text}</p>
-                        </div>
-                      </div>
-                    ))}
-                 </div>
-              </div>
               <div className="card-lifted bg-brand-gradient" style={{ borderRadius: "3rem", height: "100%", color: "white" }}>
-                 <h3 style={{ fontSize: "3rem", fontWeight: 800, marginBottom: "2rem", color: "white" }}>AI that finds <br/>hidden gluten.</h3>
-                 <p style={{ fontSize: "1.2rem", opacity: 0.9, lineHeight: 1.8, marginBottom: "4rem", color: "white" }}>
-                    Barcodes are just the start. If a food doesn't have a code, just take a picture of the label. Our AI reads everything to find hidden gluten in thickeners and other tricky ingredients.
+                 <h3 style={{ fontSize: "3rem", fontWeight: 800, marginBottom: "2rem", color: "white", lineHeight: 1.1 }}>3. The Traffic Light Safety System</h3>
+                 <p style={{ fontSize: "1.2rem", opacity: 0.9, lineHeight: 1.8, marginBottom: "3rem", color: "white" }}>
+                    We keep it simple when you're in a crowded grocery aisle. We color code every scan so you instantly know whether to buy it or leave it.
                  </p>
-                 <button className="btn-secondary" style={{ backgroundColor: "white", color: "var(--primary)" }}>
-                    How our AI works
-                 </button>
+                 <div style={{ padding: "1.5rem", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1.5rem", marginBottom: "1.5rem" }}>
+                    <h4 style={{ fontWeight: 800, fontSize: "1.2rem", color: "white", display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}><span style={{ color: "var(--status-safe)" }}>🟢</span> SAFE (Green)</h4>
+                    <p style={{ opacity: 0.9, fontSize: "0.95rem" }}>Confirmed safe by ingredients and official medical databases.</p>
+                 </div>
+                 <div style={{ padding: "1.5rem", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1.5rem", marginBottom: "1.5rem" }}>
+                    <h4 style={{ fontWeight: 800, fontSize: "1.2rem", color: "white", display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}><span style={{ color: "var(--status-caution)" }}>🟡</span> CAUTION (Amber)</h4>
+                    <p style={{ opacity: 0.9, fontSize: "0.95rem" }}>Flags ambiguous ingredients like "Spices" and suggests checking for a GF certification.</p>
+                 </div>
+                 <div style={{ padding: "1.5rem", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1.5rem" }}>
+                    <h4 style={{ fontWeight: 800, fontSize: "1.2rem", color: "white", display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}><span style={{ color: "var(--status-danger)" }}>🔴</span> GLUTEN FOUND (Red)</h4>
+                    <p style={{ opacity: 0.9, fontSize: "0.95rem" }}>Immediate alert identifying the specific prohibited grain or derivative.</p>
+                 </div>
               </div>
-           </div>
-        </div>
-      </section>
-
-      {/* Restaurant Finder Section */}
-      <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
-        <div className="container">
-           <div className="responsive-grid" style={{ alignItems: "center", gap: "4rem" }}>
-              <div className="card-lifted shadow-lg" style={{ borderRadius: "3rem", overflow: "hidden", position: "relative", height: "600px" }}>
-                 <Image src="/mockups_person/restaurant.png" alt="Restaurant Finder" fill style={{ objectFit: "cover" }} />
-              </div>
+              
               <div>
-                 <span style={{ fontSize: "1rem", fontWeight: 800, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.1em", display: "block", marginBottom: "1.5rem" }}>New Feature</span>
-                 <h2 style={{ fontSize: "4rem", fontWeight: 800, marginBottom: "2.5rem", lineHeight: 1.1 }}>Dine Out <br/><span className="text-gradient">with No Doubt.</span></h2>
-                 <p style={{ fontSize: "1.3rem", opacity: 0.7, lineHeight: 1.8, marginBottom: "3rem" }}>
-                    We use live data from places like Google Maps and Yelp to help you find safe restaurants. But we do more than that. Our AI reads through recent reviews to find any hidden risks of cross-contact. 
-                 </p>
-                 <div style={{ display: "grid", gap: "1.5rem" }}>
-                    {[
-                      { icon: "map", text: "Finds the best-rated safe spots near you." },
-                      { icon: "reviews", text: "AI checks reviews for real safety words." },
-                      { icon: "verified", text: "We give every place a Green or Amber score." }
-                    ].map((item, i) => (
-                      <div key={i} style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
-                         <div style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "rgba(86, 100, 43, 0.05)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                            <span className="material-symbols-outlined" style={{ color: "var(--primary)", fontSize: "1.2rem" }}>{item.icon}</span>
-                         </div>
-                         <p style={{ fontWeight: 600, opacity: 0.8 }}>{item.text}</p>
-                      </div>
-                    ))}
+                 <h2 style={{ fontSize: "3rem", fontWeight: 800, marginBottom: "3rem" }}>Built for You, <br/><span style={{ color: "var(--primary)" }}>With Your Privacy in Mind.</span></h2>
+                 
+                 <div style={{ display: "grid", gap: "2rem" }}>
+                    <div className="card-lifted" style={{ padding: "2.5rem" }}>
+                       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
+                          <span className="material-symbols-outlined" style={{ color: "var(--primary)" }}>edit_note</span>
+                          <h4 style={{ fontSize: "1.5rem", fontWeight: 800 }}>Personal History & Notes</h4>
+                       </div>
+                       <p style={{ opacity: 0.7, lineHeight: 1.6 }}>Keep a digital log of everything you scan. Add personal notes like <em>"Tastes great, found at Target"</em> to remember your favorites.</p>
+                    </div>
+                    <div className="card-lifted" style={{ padding: "2.5rem" }}>
+                       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
+                          <span className="material-symbols-outlined" style={{ color: "var(--primary)" }}>lock</span>
+                          <h4 style={{ fontSize: "1.5rem", fontWeight: 800 }}>Proactive Privacy</h4>
+                       </div>
+                       <p style={{ opacity: 0.7, lineHeight: 1.6 }}>Your health data is your business. We use <strong>2026-standard encryption</strong> to ensure your onboarding info and scan history stay completely private.</p>
+                    </div>
                  </div>
               </div>
            </div>
         </div>
       </section>
+
+      {/* Start Scanning Today */}
       <section className="section-padding" style={{ backgroundColor: "var(--on-surface)", color: "white" }}>
-        <div className="container" style={{ maxWidth: "800px", textAlign: "center" }}>
-           <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "2.5rem", color: "white" }}>Why one crumb matters.</h2>
-           <p style={{ fontSize: "1.4rem", opacity: 0.8, lineHeight: "1.8", color: "white" }}>
-              For most people, a tiny crumb is nothing. But for someone with Celiac disease, even a tiny speck of gluten can cause a bad reaction. That's why we don't settle for "maybe." We built this scanner to make sure your food is truly safe for you.
-           </p>
+        <div className="container" style={{ textAlign: "center", maxWidth: "1000px" }}>
+           <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "3.5rem", color: "white" }}>Start Scanning Today 💎</h2>
+           <div className="responsive-grid-3" style={{ textAlign: "left", marginBottom: "4rem" }}>
+              <div style={{ padding: "2.5rem 2rem", backgroundColor: "rgba(255,255,255,0.05)", borderRadius: "1.5rem" }}>
+                 <h4 style={{ fontWeight: 800, color: "var(--primary)", fontSize: "1.35rem", marginBottom: "1rem" }}>The Freemium Start</h4>
+                 <p style={{ opacity: 0.8, fontSize: "1rem", lineHeight: 1.6 }}>Try your first <strong>6 scans completely free</strong> —no credit card required.</p>
+              </div>
+              <div style={{ padding: "2.5rem 2rem", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1.5rem", border: "2px solid var(--primary)", position: "relative" }}>
+                 <span style={{ position: "absolute", top: "-14px", left: "2rem", backgroundColor: "var(--primary)", color: "var(--on-primary)", padding: "4px 12px", borderRadius: "12px", fontSize: "0.8rem", fontWeight: 800, textTransform: "uppercase" }}>Recommended</span>
+                 <h4 style={{ fontWeight: 800, color: "var(--primary)", fontSize: "1.35rem", marginBottom: "1rem" }}>The 30-Day Pro Trial</h4>
+                 <p style={{ opacity: 0.8, fontSize: "1rem", lineHeight: 1.6 }}>Unlock unlimited scanning, the Safe Dining Hub, and detailed ingredient breakdowns for a full month at $0.</p>
+              </div>
+              <div style={{ padding: "2.5rem 2rem", backgroundColor: "rgba(255,255,255,0.05)", borderRadius: "1.5rem" }}>
+                 <h4 style={{ fontWeight: 800, color: "var(--primary)", fontSize: "1.35rem", marginBottom: "1rem" }}>Safety Pro</h4>
+                 <p style={{ opacity: 0.8, fontSize: "1rem", lineHeight: 1.6 }}>Choose a simple monthly or discounted annual plan to keep your Digital Guardian active 24/7.</p>
+              </div>
+           </div>
+           
+           <Link href="#download" className="btn-primary" style={{ padding: "1.5rem 3.5rem", fontSize: "1.1rem", border: "2px solid rgba(255,255,255,0.2)" }}>
+             Start Your Free Trial Now
+           </Link>
         </div>
       </section>
 
-      {/* Disclaimers & Personal Note */}
+      {/* Disclaimers */}
       <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
         <div className="container" style={{ textAlign: "center", maxWidth: "900px" }}>
-           <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-highest)" }}>
-              <h4 style={{ fontSize: "1.5rem", fontWeight: 800, marginBottom: "1.5rem" }}>A quick note from our team.</h4>
-              <p style={{ fontSize: "1.1rem", opacity: 0.7, lineHeight: 1.7, marginBottom: "2.5rem" }}>
-                Hi! Just a friendly reminder: we aren't doctors. We're app developers who really care about your safety. While our AI is very smart, it's not perfect. Always check the label yourself before you eat something. We built this tool to help you find things you might miss, but you are the final judge of what you eat.
+           <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-highest)", borderLeft: "4px solid var(--status-caution)" }}>
+              <h4 style={{ fontSize: "1.5rem", fontWeight: 800, marginBottom: "1.5rem", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}>
+                <span className="material-symbols-outlined">warning</span> The "Real Talk" Disclaimer
+              </h4>
+              <p style={{ fontSize: "1.1rem", opacity: 0.7, lineHeight: 1.7 }}>
+                Celiac Scanner is an information tool, not medical advice. While AI is a powerful assistant, you should always verify the physical label yourself. We provide the data; you make the final call for your health.
               </p>
-              <div style={{ opacity: 0.4, fontSize: "0.9rem" }}>
-                This scanner is for information only. Always talk to a doctor for real medical advice.
-              </div>
            </div>
         </div>
       </section>
