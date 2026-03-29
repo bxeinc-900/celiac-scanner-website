@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -83,9 +84,9 @@ export default function Home() {
                     Hidden gluten lurks in the most unexpected places—from thickeners to flavorings. Without clinical verification, every shopping trip is a risk. We built the Celiac Scanner to be your digital guardian.
                  </p>
                  <div style={{ marginTop: "4rem", display: "flex", gap: "2rem" }}>
-                    <div className="btn-primary" style={{ backgroundColor: "white", color: "var(--on-surface)", border: "1px solid rgba(0,0,0,0.1)" }}>
+                    <Link href="/how-it-works" className="btn-primary" style={{ backgroundColor: "white", color: "var(--on-surface)", border: "1px solid rgba(0,0,0,0.1)" }}>
                         Read the Science
-                    </div>
+                    </Link>
                  </div>
             </div>
             <div>
