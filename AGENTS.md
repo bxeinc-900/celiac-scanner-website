@@ -15,4 +15,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **Goal:** Drive downloads for the mobile app and establish the brand's authority.
 # 🚨 MANDATORY DEPLOYMENT RULE
 
-Every time you make ANY change, refinement, or update to the website files in this directory, you MUST immediately push the changes to GitHub to trigger a Vercel build and make the changes live. Never leave edits unpushed.
+Every time you make ANY change, refinement, or update to the website files in this directory, you MUST immediately push the changes to GitHub to trigger a Cloudflare Pages build and make the changes live. Never leave edits unpushed.
