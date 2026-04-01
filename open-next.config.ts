@@ -1,7 +1,10 @@
-/** @type {import('@opennextjs/cloudflare').OpenNextConfig} */
 const config = {
   default: {
-    runtime: "node",
+    override: {
+      wrapper: "cloudflare-node",
+      converter: "edge",
+      proxyExternalRequest: "fetch",
+    },
   },
 };
 
