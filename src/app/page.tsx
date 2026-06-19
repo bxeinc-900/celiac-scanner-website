@@ -208,7 +208,7 @@ export default function Home() {
            <div className="responsive-grid-3" style={{ textAlign: "left", marginBottom: "4rem" }}>
               <div style={{ padding: "2.5rem 2rem", backgroundColor: "rgba(255,255,255,0.05)", borderRadius: "1.5rem" }}>
                  <h4 style={{ fontWeight: 800, color: "var(--primary)", fontSize: "1.35rem", marginBottom: "1rem" }}>The Freemium Start</h4>
-                 <p style={{ opacity: 0.8, fontSize: "1rem", lineHeight: 1.6 }}>Try your first <strong>6 scans completely free</strong> —no credit card required.</p>
+                 <p style={{ opacity: 0.8, fontSize: "1rem", lineHeight: 1.6 }}>Try your first <strong>10 scans completely free</strong> —no credit card required.</p>
               </div>
               <div style={{ padding: "2.5rem 2rem", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1.5rem", border: "2px solid var(--primary)", position: "relative" }}>
                  <span style={{ position: "absolute", top: "-14px", left: "2rem", backgroundColor: "var(--primary)", color: "var(--on-primary)", padding: "4px 12px", borderRadius: "12px", fontSize: "0.8rem", fontWeight: 800, textTransform: "uppercase" }}>Recommended</span>

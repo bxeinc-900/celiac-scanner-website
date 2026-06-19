@@ -46,7 +46,7 @@
 
 **💎 Start Scanning Today**
 
-* **The Freemium Start:** Try your first  **6 scans completely free** **—no credit card required**.
+* **The Freemium Start:** Try your first **10 scans completely free** **—no credit card required**.
 * **The 30-Day Pro Trial:** Unlock unlimited scanning, the Safe Dining Hub, and detailed ingredient breakdowns for a full month at $0**.**
 * **Safety Pro:** Choose a simple monthly or discounted annual plan to keep your Digital Guardian active 24/7**.**
 
