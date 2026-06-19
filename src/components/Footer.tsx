@@ -11,8 +11,11 @@ export default function Footer() {
             <Link href="/" style={{ display: "block", marginBottom: "2rem" }}>
               <Image src="/logo.png" alt="Celiac Scanner" width={160} height={70} style={{ objectFit: "contain" }} />
             </Link>
-            <p style={{ opacity: 0.6, maxWidth: "300px", fontSize: "0.875rem" }}>
+            <p style={{ opacity: 0.6, maxWidth: "300px", fontSize: "0.875rem", marginBottom: "1rem" }}>
               A trusted tool for Celiac safety. We use 30 expert sources to help you find safe food.
+            </p>
+            <p style={{ opacity: 0.8, fontSize: "0.875rem", fontWeight: 500, display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              Designed and developed in the USA 🇺🇸
             </p>
           </div>
           
@@ -48,9 +51,9 @@ export default function Footer() {
         <div style={{ paddingTop: "3rem", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.75rem", opacity: 0.5 }}>
           <p>© 2026 Celiac Scanner. All rights reserved. Information checked by 30 expert sources.</p>
           <div style={{ display: "flex", gap: "2rem" }}>
-             <Link href="/legal">Privacy</Link>
-             <Link href="/legal">Terms</Link>
-             <Link href="/legal">Health Warning</Link>
+             <Link href="/privacy">Privacy Policy</Link>
+             <Link href="/terms">Terms of Use</Link>
+             <Link href="/terms">Medical Disclaimer</Link>
           </div>
         </div>
       </div>
