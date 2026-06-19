@@ -114,7 +114,7 @@ export default function Legal() {
                 </p>
                 <div style={{ display: "grid", gap: "1.25rem" }}>
                   {privacyHighlights.map((item) => (
-                    <div key={item.label} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "1.25rem", alignItems: "start" }}>
+                    <div key={item.label} className="responsive-legal-grid">
                       <div style={{
                         width: "8px", height: "8px", borderRadius: "50%",
                         backgroundColor: "var(--primary)", marginTop: "0.5rem", flexShrink: 0
@@ -161,7 +161,7 @@ export default function Legal() {
                 </p>
                 <div style={{ display: "grid", gap: "1.25rem" }}>
                   {termsHighlights.map((item) => (
-                    <div key={item.label} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "1.25rem", alignItems: "start" }}>
+                    <div key={item.label} className="responsive-legal-grid">
                       <div style={{
                         width: "8px", height: "8px", borderRadius: "50%",
                         backgroundColor: "var(--primary)", marginTop: "0.5rem", flexShrink: 0

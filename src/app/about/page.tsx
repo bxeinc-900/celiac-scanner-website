@@ -43,7 +43,7 @@ export default function About() {
                   ))}
                </div>
             </div>
-            <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)", height: "600px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div className="card-lifted" style={{ backgroundColor: "var(--surface-container-lowest)", minHeight: "400px", padding: "4rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
                <div style={{ position: "relative" }}>
                  <div style={{ width: "320px", height: "320px", border: "2px dashed var(--outline-variant)", borderRadius: "100%", animation: "spin 20s linear infinite", opacity: 0.3 }}></div>
                  <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="section-padding" style={{ backgroundColor: "var(--surface-container-low)", paddingBottom: "5rem" }}>
       <div className="container">
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "5rem", marginBottom: "5rem" }}>
+        <div className="responsive-footer-grid">
           <div>
             <Link href="/" style={{ display: "block", marginBottom: "2rem" }}>
               <Image src="/logo.png" alt="Celiac Scanner" width={160} height={70} style={{ objectFit: "contain" }} />
@@ -48,9 +48,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div style={{ paddingTop: "3rem", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.75rem", opacity: 0.5 }}>
+        <div style={{ paddingTop: "3rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "2rem", fontSize: "0.75rem", opacity: 0.5 }}>
           <p>© 2026 Celiac Scanner. All rights reserved. Information checked by 30 expert sources.</p>
-          <div style={{ display: "flex", gap: "2rem" }}>
+          <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
              <Link href="/privacy">Privacy Policy</Link>
              <Link href="/terms">Terms of Use</Link>
              <Link href="/terms">Medical Disclaimer</Link>
