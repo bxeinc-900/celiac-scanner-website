@@ -32,7 +32,7 @@ export default function Footer() {
             <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>App</h4>
             <Link href="#download" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Download App</Link>
             <Link href="#trial" style={{ fontSize: "0.875rem", opacity: 0.7 }}>30-Day Free Trial</Link>
-            <Link href="#support" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Support</Link>
+            <Link href="/support" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Support</Link>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
