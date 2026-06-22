@@ -27,7 +27,7 @@
 
 **4. Amazon "Safe-Swap" Integration**Did you scan a product that isn't safe? The app automatically finds a **Certified Gluten-Free alternative on Amazon**. With one tap, you can order a safe version of exactly what you were looking for**.**
 
-**5. Safe Dining Hub**Find peace of mind away from home with our Google Maps and Yelp integration**. Our restaurant finder uses AI to ****scan reviews for crucial keywords like "cross-contamination" or "knowledgeable staff,"** helping you discover dedicated gluten-free kitchens and highly-vetted local spots instantly**.**
+**5. Restaurant Finder**Find peace of mind away from home with our Google Maps and Yelp integration**. Our restaurant finder uses AI to ****scan reviews for crucial keywords like "cross-contamination" or "knowledgeable staff,"** helping you discover dedicated gluten-free kitchens and highly-vetted local spots instantly**.**
 
 **
 --
@@ -47,7 +47,7 @@
 **💎 Start Scanning Today**
 
 * **The Freemium Start:** Try your first **10 scans completely free** **—no credit card required**.
-* **The 30-Day Pro Trial:** Unlock unlimited scanning, the Safe Dining Hub, and detailed ingredient breakdowns for a full month at $0**.**
+* **The 30-Day Pro Trial:** Unlock unlimited scanning, the Restaurant Finder, and detailed ingredient breakdowns for a full month at $0**.**
 * **Safety Pro:** Choose a simple monthly or discounted annual plan to keep your Digital Guardian active 24/7**.**
 
 **[ Start Your Free Trial Now ]**

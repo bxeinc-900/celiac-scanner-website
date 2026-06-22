@@ -25,6 +25,6 @@
 
 **Find Safe Alternatives instantly with "Safe-Swap"**Did you scan a product you really wanted, only to get a Red alert? We don't leave you hanging! The app's Amazon "Safe-Swap" Integration automatically finds a **Certified Gluten-Free alternative**. With just one tap, you can order a safe version of exactly what you were craving**.**
 
-**Dine Out with Total Confidence**Eating away from home shouldn't be a risk. Our **Safe Dining Hub** integrates with Google Maps and Yelp, using AI to scan thousands of restaurant reviews for crucial keywords like "cross-contamination" or "knowledgeable staff"**. You will instantly discover highly-vetted local spots and dedicated gluten-free kitchens in your area**.
+**Dine Out with Total Confidence**Eating away from home shouldn't be a risk. Our **Restaurant Finder** integrates with Google Maps and Yelp, using AI to scan thousands of restaurant reviews for crucial keywords like "cross-contamination" or "knowledgeable staff"**. You will instantly discover highly-vetted local spots and dedicated gluten-free kitchens in your area**.
 
 **Build Your Personal Safe List**No more trying to remember which brand of crackers didn't make you sick. Celiac Scanner keeps a completely private digital log of your scan history**. You can add personal notes to your scans, like ***"Tastes great, found at Target,"* to easily keep track of your favorite safe foods

@@ -30,7 +30,7 @@ const sections = [
         <div>
           <h3 style={{ fontSize: "1.3rem", fontWeight: 700, marginBottom: "0.75rem" }}>📍 Location</h3>
           <p style={{ fontSize: "1.1rem", opacity: 0.8, lineHeight: "1.8" }}>
-            If you use the Safe Dining Hub, the app uses your device&apos;s location to find gluten-safe restaurants near you. This location data is sent in real time to Google Maps, Yelp, and Find Me Gluten Free to retrieve search results. We do not store your location on our servers after your search is complete.
+            If you use the Restaurant Finder, the app uses your device&apos;s location to find gluten-safe restaurants near you. This location data is sent in real time to Google Maps, Yelp, and Find Me Gluten Free to retrieve search results. We do not store your location on our servers after your search is complete.
           </p>
         </div>
         <div>

@@ -134,14 +134,14 @@ export default function Features() {
            
            <div className="card-lifted" style={{ backgroundColor: "rgba(255,255,255,0.05)", textAlign: "left", display: "grid", gap: "2.5rem", padding: "4rem" }}>
               <div>
-                 <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "1rem", color: "white" }}>The Safe Dining Hub</h3>
+                 <h3 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "1rem", color: "white" }}>The Restaurant Finder</h3>
                  <p style={{ fontSize: "1.1rem", opacity: 0.8, lineHeight: 1.7, color: "white" }}>
                    Generic restaurant apps happily point you to places with "gluten-free options," but they completely miss the life-saving details you need. 
                  </p>
               </div>
               <div style={{ padding: "2rem", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1.5rem", borderLeft: "4px solid var(--primary)" }}>
                  <p style={{ fontSize: "1.2rem", fontWeight: 700, lineHeight: 1.6, color: "white" }}>
-                   Our Safe Dining Hub utilizes advanced AI to actively scan thousands of Google and Yelp customer reviews, hunting for crucial keywords that matter to your health—like <strong>"cross-contamination"</strong> and <strong>"knowledgeable staff"</strong>.
+                   Our Restaurant Finder utilizes advanced AI to actively scan thousands of Google and Yelp customer reviews, hunting for crucial keywords that matter to your health—like <strong>"cross-contamination"</strong> and <strong>"knowledgeable staff"</strong>.
                  </p>
               </div>
               <ul style={{ listStyle: "none", display: "grid", gap: "1.5rem", margin: 0, padding: 0 }}>

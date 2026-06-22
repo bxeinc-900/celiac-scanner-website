@@ -140,12 +140,12 @@ export default function Home() {
                 </p>
              </div>
 
-             {/* 5. Safe Dining Hub */}
+             {/* 5. Restaurant Finder */}
              <div className="card-lifted" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                 <div style={{ width: "60px", height: "60px", borderRadius: "50%", backgroundColor: "rgba(178, 172, 136, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px" }}>
                    <span className="material-symbols-outlined" style={{ fontSize: "2rem", color: "var(--primary)" }}>restaurant</span>
                 </div>
-                <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>5. Safe Dining Hub</h3>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>5. Restaurant Finder</h3>
                 <p style={{ opacity: 0.7, lineHeight: 1.7 }}>
                   Our restaurant finder uses AI to <strong>scan Yelp and Google Maps reviews for crucial keywords like "cross-contamination" or "knowledgeable staff,"</strong> helping you discover dedicated gluten-free kitchens and highly-vetted local spots instantly.
                 </p>
@@ -213,7 +213,7 @@ export default function Home() {
               <div style={{ padding: "2.5rem 2rem", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1.5rem", border: "2px solid var(--primary)", position: "relative" }}>
                  <span style={{ position: "absolute", top: "-14px", left: "2rem", backgroundColor: "var(--primary)", color: "var(--on-primary)", padding: "4px 12px", borderRadius: "12px", fontSize: "0.8rem", fontWeight: 800, textTransform: "uppercase" }}>Recommended</span>
                  <h4 style={{ fontWeight: 800, color: "var(--primary)", fontSize: "1.35rem", marginBottom: "1rem" }}>The 30-Day Pro Trial</h4>
-                 <p style={{ opacity: 0.8, fontSize: "1rem", lineHeight: 1.6 }}>Unlock unlimited scanning, the Safe Dining Hub, and detailed ingredient breakdowns for a full month at $0.</p>
+                 <p style={{ opacity: 0.8, fontSize: "1rem", lineHeight: 1.6 }}>Unlock unlimited scanning, the Restaurant Finder, and detailed ingredient breakdowns for a full month at $0.</p>
               </div>
               <div style={{ padding: "2.5rem 2rem", backgroundColor: "rgba(255,255,255,0.05)", borderRadius: "1.5rem" }}>
                  <h4 style={{ fontWeight: 800, color: "var(--primary)", fontSize: "1.35rem", marginBottom: "1rem" }}>Safety Pro</h4>

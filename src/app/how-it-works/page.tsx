@@ -84,7 +84,7 @@ export default function HowItWorks() {
                 </div>
                 <h3 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "1.5rem", lineHeight: 1.2 }}>Dine Out with Total Confidence</h3>
                 <p style={{ fontSize: "1.15rem", opacity: 0.8, lineHeight: 1.7 }}>
-                  Eating away from home shouldn't be a risk. Our <strong>Safe Dining Hub</strong> integrates with Google Maps and Yelp, using AI to scan thousands of restaurant reviews for crucial keywords like "cross-contamination" or "knowledgeable staff". You will instantly discover highly-vetted local spots and dedicated gluten-free kitchens in your area.
+                  Eating away from home shouldn't be a risk. Our <strong>Restaurant Finder</strong> integrates with Google Maps and Yelp, using AI to scan thousands of restaurant reviews for crucial keywords like "cross-contamination" or "knowledgeable staff". You will instantly discover highly-vetted local spots and dedicated gluten-free kitchens in your area.
                 </p>
              </div>
           </div>

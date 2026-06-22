@@ -66,7 +66,7 @@ export default function SupportPage() {
 
               <h3 style={{ fontSize: "1.3rem", fontWeight: 700, marginBottom: "0.5rem" }}>Does the app work outside the US?</h3>
               <p style={{ fontSize: "1.1rem", opacity: 0.8, lineHeight: "1.8" }}>
-                Yes! Because the scanner reads the actual text on the label rather than relying on a static barcode database, it works on international products. The Safe Dining Hub relies on Google Maps, Yelp, and Find Me Gluten Free, which have global coverage.
+                Yes! Because the scanner reads the actual text on the label rather than relying on a static barcode database, it works on international products. The Restaurant Finder relies on Google Maps, Yelp, and Find Me Gluten Free, which have global coverage.
               </p>
             </div>
 

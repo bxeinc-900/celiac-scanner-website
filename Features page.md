@@ -27,7 +27,7 @@
 * **The Gap:** Scanning an item you really wanted to eat and getting a "Red" alert is disappointing, leaving you back at square one.
 * **Our Unique Solution:** Celiac Scanner doesn't leave you hanging. If you scan an unsafe product, the app automatically searches for a **Certified Gluten-Free alternative on Amazon**. With just one tap, you can order a safe, highly-rated version of exactly what you were craving**.**
 
-**🍽️ The Safe Dining Hub**
+**🍽️ The Restaurant Finder**
 
 * **The Gap:** Generic restaurant apps will show you places with "gluten-free options," but they don't account for the severe risk of cross-contamination in shared kitchens.
 * **Our Unique Solution:** Our restaurant finder integrates directly with Google Maps and Yelp, using AI to **scan thousands of reviews specifically for crucial keywords like "cross-contamination" or "knowledgeable staff"**. You can instantly discover dedicated gluten-free kitchens and highly-vetted local spots, allowing you to dine out with true peace of mind**.**
@@ -44,13 +44,13 @@
 
 **But what if your trusted label scanner was also your ultimate travel guide?**
 
-**One App. Total Protection. No More App-Switching.**Celiac Scanner revolutionizes gluten-free travel by seamlessly integrating our **Safe Dining Hub** directly into your AI food label scanner**. Whether you are scanning snacks at a local market or looking for a safe sit-down dinner, you no longer have to toggle back and forth between different apps. Your complete digital guardian is finally in one place**.
+**One App. Total Protection. No More App-Switching.**Celiac Scanner revolutionizes gluten-free travel by seamlessly integrating our **Restaurant Finder** directly into your AI food label scanner**. Whether you are scanning snacks at a local market or looking for a safe sit-down dinner, you no longer have to toggle back and forth between different apps. Your complete digital guardian is finally in one place**.
 
-**AI That Reads Between the Lines**Generic restaurant apps will happily point you to places with "gluten-free options," but they completely miss the life-saving details you need**. Our Safe Dining Hub integrates directly with Google Maps and Yelp, but it doesn't stop there**.
+**AI That Reads Between the Lines**Generic restaurant apps will happily point you to places with "gluten-free options," but they completely miss the life-saving details you need**. Our Restaurant Finder integrates directly with Google Maps and Yelp, but it doesn't stop there**.
 
 **It utilizes advanced AI to actively scan thousands of customer reviews, hunting for the crucial, nuanced keywords that actually matter to your health—like ****"cross-contamination"** and **"knowledgeable staff"**.
 
-**The Benefits of the Safe Dining Hub:**
+**The Benefits of the Restaurant Finder:**
 
 * **Discover Hidden Gems Instantly:** Uncover highly-vetted local spots and dedicated gluten-free kitchens that standard searches often miss**.**
 * **True Peace of Mind:** Get a realistic picture of a restaurant's safety protocols before you ever walk through the door, giving you confidence when eating away from home**.**
