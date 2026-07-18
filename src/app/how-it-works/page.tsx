@@ -2,6 +2,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
+export const metadata = {
+  title: "How Celiac Scanner Works | AI Gluten Detection in 3 Steps",
+  description: "See how Celiac Scanner uses Gemini 3 AI and 30+ trusted medical sources to give you instant Safe, Caution, or Gluten Found verdicts on any food product — no barcode needed.",
+};
+
 export default function HowItWorks() {
   return (
     <main style={{ backgroundColor: "var(--surface)", minHeight: "100vh" }}>

@@ -3,6 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
+export const metadata = {
+  title: "App Features | Celiac Scanner — Built for Celiac, Not Just a Trend",
+  description: "Explore every feature of Celiac Scanner: Gemini 3 AI label reading, 30-source Trust database, Traffic Light safety system, Amazon Safe-Swap, Restaurant Finder, and private scan history.",
+};
+
 export default function Features() {
   return (
     <main style={{ backgroundColor: "var(--surface)", minHeight: "100vh" }}>

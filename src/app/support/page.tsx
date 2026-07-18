@@ -2,13 +2,56 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Support | Celiac Scanner",
-  description: "Get help with Celiac Scanner, report an issue, or ask a question.",
+  title: "Support & FAQ | Celiac Scanner",
+  description: "Get help with Celiac Scanner. Find answers to common questions about accuracy, international use, subscriptions, and how to contact our support team.",
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the Celiac Scanner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use advanced AI to read ingredient lists, but it is not infallible. The app should be used as a helpful guide, not a medical device. Always double-check labels yourself, especially for certified gluten-free seals or specific allergy warnings.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Does Celiac Scanner work outside the US?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Because the scanner reads the actual text on the label rather than relying on a static barcode database, it works on international products. The Restaurant Finder relies on Google Maps, Yelp, and Find Me Gluten Free, which have global coverage.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel my Celiac Scanner subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All subscription payments and billing are managed directly by Apple. You can cancel your subscription at any time through your iPhone's Apple ID settings or at appleid.apple.com.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How does Celiac Scanner detect hidden gluten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Celiac Scanner uses Gemini 3 Multimodal AI to read the physical ingredient list directly from the package. It identifies hidden gluten sources like Malt, Brewer's Yeast, and Yeast Extract, then cross-references against 30+ authoritative medical sources including Celiac.org and Mayo Clinic.",
+      },
+    },
+  ],
 };
 
 export default function SupportPage() {
   return (
     <main style={{ backgroundColor: "var(--surface)", minHeight: "100vh" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Navbar />
 
       {/* Hero */}

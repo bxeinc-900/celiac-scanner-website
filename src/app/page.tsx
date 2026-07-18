@@ -3,9 +3,43 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "Celiac Scanner | AI-Powered Gluten-Free Label Review & Safety",
+  description: "The ultimate Celiac Safe Scanner. Use AI to scan ingredient labels for hidden gluten and cross-contact risks. No barcode required. Trusted by clinicians and the Celiac community.",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Celiac Scanner",
+  "operatingSystem": "iOS",
+  "applicationCategory": "HealthApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+  },
+  "description": "AI-powered gluten-free food label scanner. Uses Gemini 3 AI to read ingredient lists and cross-reference 30+ medical authorities including Celiac.org, Mayo Clinic, and Columbia University. Includes Restaurant Finder with cross-contamination risk analysis.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "1",
+  },
+  "url": "https://apps.apple.com/us/app/celiac-scanner/id6761954577",
+  "downloadUrl": "https://apps.apple.com/us/app/celiac-scanner/id6761954577",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AntiGravity Labs",
+  },
+};
+
 export default function Home() {
   return (
     <main style={{ backgroundColor: "var(--surface)", minHeight: "100vh" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* Hero Section */}

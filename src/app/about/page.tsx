@@ -2,6 +2,11 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "Our Story | Celiac Scanner",
+  description: "Celiac Scanner started as a family need — we couldn't find food labels we could trust. Learn how we built the AI-powered gluten safety tool trusted by the Celiac community.",
+};
+
 export default function About() {
   return (
     <main style={{ backgroundColor: "var(--surface)", minHeight: "100vh" }}>

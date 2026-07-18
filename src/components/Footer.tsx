@@ -31,7 +31,7 @@ export default function Footer() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>App</h4>
             <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Download App</Link>
-            <Link href="#trial" style={{ fontSize: "0.875rem", opacity: 0.7 }}>30-Day Free Trial</Link>
+            <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.875rem", opacity: 0.7 }}>30-Day Free Trial</Link>
             <Link href="/support" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Support</Link>
           </div>
 

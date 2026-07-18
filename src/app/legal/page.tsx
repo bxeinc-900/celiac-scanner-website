@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Legal Rules | Celiac Scanner",
-  description: "Celiac Scanner's legal hub — medical disclaimer, privacy policy, and terms of use.",
+  title: "Privacy Policy & Terms of Use | Celiac Scanner",
+  description: "Celiac Scanner's legal hub — full privacy policy, terms of use, medical disclaimer, and Apple EULA-compliant end user license agreement.",
 };
 
 const privacyHighlights = [
