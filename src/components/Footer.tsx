@@ -30,7 +30,7 @@ export default function Footer() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>App</h4>
-            <Link href="#download" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Download App</Link>
+            <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Download App</Link>
             <Link href="#trial" style={{ fontSize: "0.875rem", opacity: 0.7 }}>30-Day Free Trial</Link>
             <Link href="/support" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Support</Link>
           </div>
@@ -38,11 +38,8 @@ export default function Footer() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
              <h4 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1.5rem" }}>Download</h4>
              <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", alignItems: "flex-start" }}>
-                <Link href="#download">
+                <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer">
                    <Image src="/app-store.svg" alt="Download on the App Store" width={140} height={40} style={{ height: "40px", width: "auto" }} />
-                </Link>
-                <Link href="#download">
-                   <Image src="/google-play.svg" alt="Get it on Google Play" width={160} height={40} style={{ height: "40px", width: "auto" }} />
                 </Link>
              </div>
           </div>

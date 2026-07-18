@@ -42,7 +42,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>{link.label}</Link>
           ))}
-          <Link href="#download" className="btn-primary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.75rem" }}>
+          <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.75rem" }}>
             Get Started
           </Link>
         </div>
@@ -96,7 +96,9 @@ export default function Navbar() {
             </Link>
           ))}
           <Link 
-            href="#download" 
+            href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="btn-primary" 
             style={{ padding: "1.25rem 3rem", fontSize: "1rem", marginTop: "2rem" }}
             onClick={() => setIsOpen(false)}

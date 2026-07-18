@@ -191,7 +191,7 @@ export default function Features() {
       <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)", textAlign: "center" }}>
         <div className="container">
            <h2 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "2.5rem" }}>Ready to Stop Stressing over Every Meal?</h2>
-           <Link href="#download" className="btn-primary" style={{ padding: "1.5rem 3.5rem", fontSize: "1.15rem" }}>
+           <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: "1.5rem 3.5rem", fontSize: "1.15rem" }}>
              Get the Ultimate Digital Guardian
            </Link>
         </div>

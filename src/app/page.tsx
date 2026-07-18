@@ -58,11 +58,8 @@ export default function Home() {
               </p>
               
               <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", marginBottom: "3.5rem", alignItems: "center", justifyContent: "inherit" }}>
-                <Link href="#download">
+                <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer">
                   <Image src="/app-store.svg" alt="Download on the App Store" width={160} height={44} style={{ height: "44px", width: "auto" }} />
-                </Link>
-                <Link href="#download">
-                  <Image src="/google-play.svg" alt="Get it on Google Play" width={180} height={44} style={{ height: "44px", width: "auto" }} />
                 </Link>
               </div>
             </div>
@@ -221,7 +218,7 @@ export default function Home() {
               </div>
            </div>
            
-           <Link href="#download" className="btn-primary" style={{ padding: "1.5rem 3.5rem", fontSize: "1.1rem", border: "2px solid rgba(255,255,255,0.2)" }}>
+           <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: "1.5rem 3.5rem", fontSize: "1.1rem", border: "2px solid rgba(255,255,255,0.2)" }}>
              Start Your Free Trial Now
            </Link>
         </div>
