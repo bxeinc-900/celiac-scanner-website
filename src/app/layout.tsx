@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://celiac-scanner-website.pages.dev"),
+  metadataBase: new URL("https://www.celiacscanner.com"),
   title: "Celiac Scanner | AI-Powered Gluten-Free Label Review & Safety",
   description: "The ultimate Celiac Safe Scanner. Use AI to scan ingredient labels for hidden gluten and cross-contact risks. No barcode required. Trusted by clinicians and the Celiac community.",
   keywords: ["celiac scanner", "gluten free app", "gluten free scanner", "celiac safe food", "hidden gluten finder", "ai food scanner", "cross-contamination warning", "gluten free label reader"],
