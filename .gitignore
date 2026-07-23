@@ -44,3 +44,6 @@ reference/
 # local analytics logs
 /ANALYTICS/analytics.md
 
+# wrangler cache
+.wrangler/
+
