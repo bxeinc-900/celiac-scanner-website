@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const PORT = 3001;
-const FILE_PATH = path.join(__dirname, "analytics.md");
+const FILE_PATH = path.join(__dirname, "ANALYTICS", "analytics.md");
 
 // Initialize analytics.md if it doesn't exist
 function ensureAnalyticsFile() {

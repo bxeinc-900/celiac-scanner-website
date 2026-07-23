@@ -42,5 +42,5 @@ next-env.d.ts
 reference/
 
 # local analytics logs
-analytics.md
+/ANALYTICS/analytics.md
 
