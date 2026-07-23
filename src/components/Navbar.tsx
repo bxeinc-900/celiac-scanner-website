@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { trackClick } from "@/lib/analytics";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,31 @@ export default function Navbar() {
       document.body.classList.remove("mobile-nav-active");
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    const handleGlobalClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const anchor = target.closest("a");
+      if (anchor && anchor.href.includes("apps.apple.com")) {
+        let buttonText = anchor.innerText.trim();
+        if (!buttonText) {
+          const img = anchor.querySelector("img");
+          if (img) {
+            buttonText = img.alt || "App Store Badge";
+          }
+        }
+        if (!buttonText) {
+          buttonText = "App Store Link";
+        }
+        trackClick(buttonText, anchor.href);
+      }
+    };
+
+    document.addEventListener("click", handleGlobalClick);
+    return () => {
+      document.removeEventListener("click", handleGlobalClick);
+    };
+  }, []);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -42,7 +68,13 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>{link.label}</Link>
           ))}
-          <Link href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.75rem" }}>
+          <Link 
+            href="https://apps.apple.com/us/app/celiac-scanner/id6761954577" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-primary" 
+            style={{ padding: "0.5rem 1.25rem", fontSize: "0.75rem" }}
+          >
             Get Started
           </Link>
         </div>
@@ -101,7 +133,9 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary" 
             style={{ padding: "1.25rem 3rem", fontSize: "1rem", marginTop: "2rem" }}
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false);
+            }}
           >
             Get Started
           </Link>
