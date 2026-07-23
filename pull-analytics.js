@@ -22,6 +22,11 @@ try {
   let totalPageviews = 0;
 
   for (const k of countKeys) {
+    // Skip daily counts in this loop (daily counts start with count:traffic:date: or count:clicks:date:)
+    if (k.name.startsWith("count:traffic:date:") || k.name.startsWith("count:clicks:date:")) {
+      continue;
+    }
+
     const countVal = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "${k.name}" --remote`, { encoding: "utf8" }).trim();
     const count = parseInt(countVal, 10) || 0;
 
@@ -43,7 +48,42 @@ try {
   // Calculate total website clicks
   const totalWebClicks = clickSummary.reduce((sum, item) => sum + item.count, 0);
 
-  // 2. Get the latest clicks log from Cloudflare KV
+  // 2. Fetch last 30 days of daily stats (efficiently querying only keys that exist)
+  const last30Days = [];
+  const today = new Date();
+  for (let i = 0; i < 30; i++) {
+    const d = new Date(today);
+    d.setDate(today.getDate() - i);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    last30Days.push(`${year}-${month}-${day}`);
+  }
+
+  const dailyStats = [];
+  for (const date of last30Days) {
+    const trafficKey = `count:traffic:date:${date}`;
+    const clicksKey = `count:clicks:date:${date}`;
+
+    const hasTraffic = keys.some(k => k.name === trafficKey);
+    const hasClicks = keys.some(k => k.name === clicksKey);
+
+    let trafficVal = 0;
+    let clicksVal = 0;
+
+    if (hasTraffic) {
+      const trafficOut = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "${trafficKey}" --remote`, { encoding: "utf8" }).trim();
+      trafficVal = parseInt(trafficOut, 10) || 0;
+    }
+    if (hasClicks) {
+      const clicksOut = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "${clicksKey}" --remote`, { encoding: "utf8" }).trim();
+      clicksVal = parseInt(clicksOut, 10) || 0;
+    }
+
+    dailyStats.push({ date, pageviews: trafficVal, clicks: clicksVal });
+  }
+
+  // 3. Get the latest clicks log from Cloudflare KV
   let latestClicks = [];
   try {
     const latestClicksOutput = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "latest_clicks" --remote`, { encoding: "utf8" }).trim();
@@ -54,7 +94,7 @@ try {
     console.log("No latest clicks history found yet in KV.");
   }
 
-  // 3. Get the latest pageviews log from Cloudflare KV
+  // 4. Get the latest pageviews log from Cloudflare KV
   let latestViews = [];
   try {
     const latestViewsOutput = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "latest_views" --remote`, { encoding: "utf8" }).trim();
@@ -65,7 +105,7 @@ try {
     console.log("No latest views history found yet in KV.");
   }
 
-  // 4. Read Adapty stats from local JSON file
+  // 5. Read Adapty stats from local JSON file
   let adaptyData = {
     last_updated: new Date().toISOString(),
     app_installs: 0,
@@ -93,7 +133,7 @@ try {
     ? ((adaptyData.active_subscriptions / adaptyData.paywall_views) * 100).toFixed(1)
     : "0.0";
 
-  // 5. Generate consolidated Markdown content
+  // 6. Generate consolidated Markdown content
   let markdown = `# Celiac Scanner Analytics Dashboard\n\n`;
   markdown += `*Last updated: ${new Date().toLocaleString()}*\n\n`;
 
@@ -108,6 +148,16 @@ try {
   markdown += `| **Conversion Rate (Install → Sub)** | **${installToSubRate}%** | Percentage of app installs converting to paid |\n`;
   markdown += `| **Conversion Rate (Paywall → Sub)** | **${viewToSubRate}%** | Percentage of paywall views converting to paid |\n`;
   markdown += `| **Total Revenue** | **$${adaptyData.total_revenue_usd.toFixed(2)}** | Total gross subscription revenue |\n\n`;
+
+  markdown += `---\n\n`;
+
+  markdown += `## 📊 Historical Traffic & Clicks (Last 30 Days)\n\n`;
+  markdown += `| Date | Website Pageviews | App Store Link Clicks |\n`;
+  markdown += `| :--- | :---: | :---: |\n`;
+  dailyStats.forEach(day => {
+    markdown += `| ${day.date} | ${day.pageviews} | ${day.clicks} |\n`;
+  });
+  markdown += `\n`;
 
   markdown += `---\n\n`;
 
@@ -165,7 +215,7 @@ try {
     markdown += `\n`;
   }
 
-  // 6. Ensure ANALYTICS folder exists and write file
+  // 7. Ensure ANALYTICS folder exists and write file
   const analyticsDir = path.dirname(FILE_PATH);
   if (!fs.existsSync(analyticsDir)) {
     fs.mkdirSync(analyticsDir, { recursive: true });
