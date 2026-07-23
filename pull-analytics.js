@@ -9,7 +9,7 @@ console.log("Fetching live analytics data from Cloudflare KV...");
 
 try {
   // 1. Get the list of all keys to identify click counters
-  const keysOutput = execSync(`npx wrangler kv key list --namespace-id=${NAMESPACE_ID}`, { encoding: "utf8" });
+  const keysOutput = execSync(`npx wrangler kv key list --namespace-id=${NAMESPACE_ID} --remote`, { encoding: "utf8" });
   const keys = JSON.parse(keysOutput);
 
   // Filter keys starting with "count:"
@@ -18,7 +18,7 @@ try {
 
   for (const k of countKeys) {
     const buttonName = k.name.replace("count:", "");
-    const countVal = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "${k.name}"`, { encoding: "utf8" }).trim();
+    const countVal = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "${k.name}" --remote`, { encoding: "utf8" }).trim();
     summary.push({ button: buttonName, count: parseInt(countVal, 10) || 0 });
   }
 
@@ -28,7 +28,7 @@ try {
   // 2. Get the latest clicks log
   let latestClicks = [];
   try {
-    const latestOutput = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "latest_clicks"`, { encoding: "utf8" }).trim();
+    const latestOutput = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "latest_clicks" --remote`, { encoding: "utf8" }).trim();
     if (latestOutput && latestOutput !== "Value not found") {
       latestClicks = JSON.parse(latestOutput);
     }
