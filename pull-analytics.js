@@ -15,32 +15,57 @@ try {
 
   // Filter keys starting with "count:"
   const countKeys = keys.filter(k => k.name.startsWith("count:"));
-  const summary = [];
+  
+  // Categorize click counters vs pageview counters
+  const clickSummary = [];
+  const pageviewSummary = [];
+  let totalPageviews = 0;
 
   for (const k of countKeys) {
-    const buttonName = k.name.replace("count:", "");
     const countVal = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "${k.name}" --remote`, { encoding: "utf8" }).trim();
-    summary.push({ button: buttonName, count: parseInt(countVal, 10) || 0 });
+    const count = parseInt(countVal, 10) || 0;
+
+    if (k.name.startsWith("count:pageview:")) {
+      const routeName = k.name.replace("count:pageview:", "");
+      pageviewSummary.push({ route: routeName, count });
+    } else if (k.name === "count:total_pageviews") {
+      totalPageviews = count;
+    } else {
+      const buttonName = k.name.replace("count:", "");
+      clickSummary.push({ button: buttonName, count });
+    }
   }
 
-  // Sort summary by click counts descending
-  summary.sort((a, b) => b.count - a.count);
+  // Sort summaries
+  clickSummary.sort((a, b) => b.count - a.count);
+  pageviewSummary.sort((a, b) => b.count - a.count);
 
   // Calculate total website clicks
-  const totalWebClicks = summary.reduce((sum, item) => sum + item.count, 0);
+  const totalWebClicks = clickSummary.reduce((sum, item) => sum + item.count, 0);
 
   // 2. Get the latest clicks log from Cloudflare KV
   let latestClicks = [];
   try {
-    const latestOutput = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "latest_clicks" --remote`, { encoding: "utf8" }).trim();
-    if (latestOutput && latestOutput !== "Value not found") {
-      latestClicks = JSON.parse(latestOutput);
+    const latestClicksOutput = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "latest_clicks" --remote`, { encoding: "utf8" }).trim();
+    if (latestClicksOutput && latestClicksOutput !== "Value not found") {
+      latestClicks = JSON.parse(latestClicksOutput);
     }
   } catch (err) {
     console.log("No latest clicks history found yet in KV.");
   }
 
-  // 3. Read Adapty stats from local JSON file
+  // 3. Get the latest pageviews log from Cloudflare KV
+  let latestViews = [];
+  try {
+    const latestViewsOutput = execSync(`npx wrangler kv key get --namespace-id=${NAMESPACE_ID} "latest_views" --remote`, { encoding: "utf8" }).trim();
+    if (latestViewsOutput && latestViewsOutput !== "Value not found") {
+      latestViews = JSON.parse(latestViewsOutput);
+    }
+  } catch (err) {
+    console.log("No latest views history found yet in KV.");
+  }
+
+  // 4. Read Adapty stats from local JSON file
   let adaptyData = {
     last_updated: new Date().toISOString(),
     app_installs: 0,
@@ -68,7 +93,7 @@ try {
     ? ((adaptyData.active_subscriptions / adaptyData.paywall_views) * 100).toFixed(1)
     : "0.0";
 
-  // 4. Generate consolidated Markdown content
+  // 5. Generate consolidated Markdown content
   let markdown = `# Celiac Scanner Analytics Dashboard\n\n`;
   markdown += `*Last updated: ${new Date().toLocaleString()}*\n\n`;
 
@@ -86,15 +111,43 @@ try {
 
   markdown += `---\n\n`;
 
+  markdown += `## 🌐 Website Traffic & Pageviews (Cloudflare KV)\n\n`;
+  markdown += `*Real-time page views and visitor routes. Total Pageviews: **${totalPageviews}***\n\n`;
+
+  if (pageviewSummary.length === 0) {
+    markdown += `*No page views recorded yet in production.*\n\n`;
+  } else {
+    markdown += `| Page Route | Total Pageviews |\n`;
+    markdown += `| :--- | :--- |\n`;
+    pageviewSummary.forEach(item => {
+      markdown += `| \`${item.route}\` | ${item.count} |\n`;
+    });
+    markdown += `\n`;
+  }
+
+  markdown += `### Recent Website Pageviews (Latest 100 Events)\n\n`;
+  if (latestViews.length === 0) {
+    markdown += `*No pageview events logged yet in production.*\n\n`;
+  } else {
+    markdown += `| Timestamp | Page Route |\n`;
+    markdown += `| :--- | :--- |\n`;
+    latestViews.forEach(item => {
+      markdown += `| ${item.timestamp} | \`${item.page}\` |\n`;
+    });
+    markdown += `\n`;
+  }
+
+  markdown += `---\n\n`;
+
   markdown += `## 🌐 Website App Store Clicks (Cloudflare KV)\n\n`;
   markdown += `*Real-time click traffic from your marketing website redirecting to the App Store. Total Clicks: **${totalWebClicks}***\n\n`;
 
-  if (summary.length === 0) {
+  if (clickSummary.length === 0) {
     markdown += `*No website clicks recorded yet in production.*\n\n`;
   } else {
     markdown += `| Button Label | Total Clicks |\n`;
     markdown += `| :--- | :--- |\n`;
-    summary.forEach(item => {
+    clickSummary.forEach(item => {
       markdown += `| **${item.button}** | ${item.count} |\n`;
     });
     markdown += `\n`;
@@ -112,14 +165,14 @@ try {
     markdown += `\n`;
   }
 
-  // 5. Ensure ANALYTICS folder exists and write file
+  // 6. Ensure ANALYTICS folder exists and write file
   const analyticsDir = path.dirname(FILE_PATH);
   if (!fs.existsSync(analyticsDir)) {
     fs.mkdirSync(analyticsDir, { recursive: true });
   }
 
   fs.writeFileSync(FILE_PATH, markdown, "utf8");
-  console.log(`Success! Updated live dashboard in: ${FILE_PATH}`);
+  console.log("Success! Updated live dashboard in: " + FILE_PATH);
 
 } catch (error) {
   console.error("Error pulling analytics from Cloudflare:", error.message);

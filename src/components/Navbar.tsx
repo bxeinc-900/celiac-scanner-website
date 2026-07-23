@@ -2,10 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { trackClick } from "@/lib/analytics";
+import { usePathname } from "next/navigation";
+import { trackClick, trackPageView } from "@/lib/analytics";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    trackPageView(pathname);
+  }, [pathname]);
 
   useEffect(() => {
     if (isOpen) {

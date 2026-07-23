@@ -36,7 +36,14 @@ const server = http.createServer((req, res) => {
     req.on("end", () => {
       try {
         const data = JSON.parse(body);
-        const { timestamp, page, buttonText, destination } = data;
+        const { timestamp, page, buttonText, destination, type } = data;
+
+        if (type === "pageview") {
+          console.log(`[Tracker] Logged pageview: "${page}"`);
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ success: true }));
+          return;
+        }
 
         ensureAnalyticsFile();
 

@@ -1,8 +1,44 @@
 export const onRequestPost: PagesFunction<{ ANALYTICS_KV: KVNamespace }> = async (context) => {
   try {
     const data = await context.request.json();
-    const { timestamp, page, buttonText, destination } = data;
+    const { timestamp, page, buttonText, destination, type } = data;
 
+    // Handle Pageview Tracking
+    if (type === "pageview") {
+      // 1. Increment view count for this specific page path
+      const pageKey = `count:pageview:${page}`;
+      const currentPageCountStr = await context.env.ANALYTICS_KV.get(pageKey);
+      const currentPageCount = currentPageCountStr ? parseInt(currentPageCountStr, 10) : 0;
+      const newPageCount = currentPageCount + 1;
+      await context.env.ANALYTICS_KV.put(pageKey, newPageCount.toString());
+
+      // 2. Increment overall total pageviews
+      const totalKey = "count:total_pageviews";
+      const totalCountStr = await context.env.ANALYTICS_KV.get(totalKey);
+      const totalCount = totalCountStr ? parseInt(totalCountStr, 10) : 0;
+      const newTotalCount = totalCount + 1;
+      await context.env.ANALYTICS_KV.put(totalKey, newTotalCount.toString());
+
+      // 3. Append to a rolling list of the latest 100 page view events
+      const latestViewsStr = await context.env.ANALYTICS_KV.get("latest_views");
+      const latestViews = latestViewsStr ? JSON.parse(latestViewsStr) : [];
+      
+      latestViews.unshift({ timestamp, page });
+      
+      if (latestViews.length > 100) {
+        latestViews.pop();
+      }
+      
+      await context.env.ANALYTICS_KV.put("latest_views", JSON.stringify(latestViews));
+
+      console.log(`[Edge Analytics] Logged pageview for "${page}". Total pageviews: ${newTotalCount}`);
+      
+      return new Response(JSON.stringify({ success: true, totalPageviews: newTotalCount }), {
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    // Default: Handle Outbound App Store Click Tracking
     if (!buttonText) {
       return new Response(JSON.stringify({ error: "Missing buttonText" }), {
         status: 400,
