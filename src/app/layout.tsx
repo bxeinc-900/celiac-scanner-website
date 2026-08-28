@@ -31,6 +31,17 @@ export const metadata: Metadata = {
     description: "Instantly verify if products are safe for Celiacs using advanced AI label analysis. Beyond barcodes.",
     images: ["/og-image.png"],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

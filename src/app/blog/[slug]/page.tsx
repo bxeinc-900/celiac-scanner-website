@@ -22,9 +22,48 @@ export async function generateMetadata({ params }: PageProps) {
       title: "Article Not Found | Celiac Scanner",
     };
   }
+
+  const articleUrl = `https://www.celiacscanner.com/blog/${post.slug}`;
+
   return {
-    title: `${post.title} | Celiac Scanner Blog`,
+    title: `${post.title} | Celiac Scanner`,
     description: post.excerpt,
+    keywords: [
+      "celiac tax deduction",
+      "gluten free tax write off",
+      "IRS gluten free medical deduction",
+      "Canada CRA METC celiac",
+      "celiac disease grocery tax credit",
+      "gluten free receipt scanner",
+      post.category.toLowerCase(),
+    ],
+    alternates: {
+      canonical: articleUrl,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: articleUrl,
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      siteName: "Celiac Scanner",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
   };
 }
 
@@ -44,12 +83,21 @@ export default async function BlogPostPage({ params }: PageProps) {
     "author": {
       "@type": "Organization",
       "name": post.author,
+      "url": "https://www.celiacscanner.com",
     },
     "datePublished": post.date,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.celiacscanner.com/blog/${post.slug}`,
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Celiac Scanner",
-      "url": "https://celiacscanner.com",
+      "url": "https://www.celiacscanner.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.celiacscanner.com/logo.png",
+      },
     },
   };
 
@@ -97,7 +145,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
 
           <h1 style={{ 
-            fontSize: "clamp(2.5rem, 4.5vw, 3.75rem)", 
+            fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", 
             fontWeight: 800, 
             lineHeight: 1.15, 
             marginBottom: "2rem",
@@ -108,7 +156,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </h1>
 
           <p style={{ 
-            fontSize: "1.3rem", 
+            fontSize: "1.25rem", 
             lineHeight: "1.7", 
             opacity: 0.85, 
             fontWeight: 500,
@@ -125,10 +173,11 @@ export default async function BlogPostPage({ params }: PageProps) {
       <section className="section-padding">
         <div className="container" style={{ maxWidth: "850px" }}>
           
-          <div style={{ fontSize: "1.15rem", lineHeight: "1.8", opacity: 0.9 }}>
-            <p style={{ marginBottom: "2.5rem", fontSize: "1.2rem" }}>
+          <div style={{ fontSize: "1.125rem", lineHeight: "1.8", opacity: 0.9 }}>
+            
+            <div style={{ marginBottom: "2.5rem", whiteSpace: "pre-line" }}>
               {post.content.introduction}
-            </p>
+            </div>
 
             {/* Key Takeaways Box */}
             {post.content.takeaways && post.content.takeaways.length > 0 && (
@@ -136,7 +185,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 backgroundColor: "var(--surface-container-highest)", 
                 padding: "2.5rem", 
                 borderRadius: "1.75rem", 
-                marginBottom: "3rem",
+                marginBottom: "3.5rem",
                 borderLeft: "4px solid var(--primary)"
               }}>
                 <h3 style={{ fontSize: "1.25rem", fontWeight: 800, marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
@@ -150,11 +199,11 @@ export default async function BlogPostPage({ params }: PageProps) {
               </div>
             )}
 
-            {/* Sections */}
+            {/* Main Sections */}
             {post.content.sections.map((sec, i) => (
-              <div key={i} style={{ marginBottom: "3rem" }}>
+              <div key={i} style={{ marginBottom: "3.5rem" }}>
                 <h2 style={{ 
-                  fontSize: "2rem", 
+                  fontSize: "1.85rem", 
                   fontWeight: 800, 
                   marginBottom: "1.25rem", 
                   color: "var(--on-surface)",
@@ -162,9 +211,11 @@ export default async function BlogPostPage({ params }: PageProps) {
                 }}>
                   {sec.heading}
                 </h2>
-                <p style={{ marginBottom: "1.5rem" }}>
+                
+                <div style={{ marginBottom: "1.5rem", whiteSpace: "pre-line" }}>
                   {sec.body}
-                </p>
+                </div>
+
                 {sec.bulletPoints && sec.bulletPoints.length > 0 && (
                   <ul style={{ 
                     backgroundColor: "var(--surface-container-low)", 
@@ -173,15 +224,88 @@ export default async function BlogPostPage({ params }: PageProps) {
                     display: "flex", 
                     flexDirection: "column", 
                     gap: "1rem",
-                    marginBottom: "1.5rem"
+                    marginBottom: "1.75rem"
                   }}>
                     {sec.bulletPoints.map((point, pIdx) => (
                       <li key={pIdx} style={{ fontSize: "1.05rem" }}>{point}</li>
                     ))}
                   </ul>
                 )}
+
+                {/* Subsections */}
+                {sec.subsections && sec.subsections.length > 0 && (
+                  <div style={{ display: "flex", flexDirection: "column", gap: "2rem", marginTop: "2rem" }}>
+                    {sec.subsections.map((sub, subIdx) => (
+                      <div key={subIdx} className="card-lifted" style={{ padding: "2rem", backgroundColor: "var(--surface-container-lowest)", borderRadius: "1.5rem" }}>
+                        <h3 style={{ fontSize: "1.35rem", fontWeight: 800, marginBottom: "0.75rem", color: "var(--primary)" }}>
+                          {sub.subheading}
+                        </h3>
+                        <p style={{ margin: 0, whiteSpace: "pre-line", opacity: 0.85 }}>
+                          {sub.body}
+                        </p>
+                        {sub.bulletPoints && sub.bulletPoints.length > 0 && (
+                          <ul style={{ marginTop: "1rem", paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                            {sub.bulletPoints.map((bp, bpIdx) => (
+                              <li key={bpIdx} style={{ fontSize: "0.95rem" }}>{bp}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
+
+            {/* Comparison Table */}
+            {post.content.table && (
+              <div style={{ marginBottom: "3.5rem" }}>
+                <div style={{ overflowX: "auto", borderRadius: "1.5rem", boxShadow: "0 4px 20px rgba(0,0,0,0.04)" }}>
+                  <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.95rem" }}>
+                    <thead>
+                      <tr style={{ backgroundColor: "var(--primary)", color: "white" }}>
+                        {post.content.table.headers.map((header, hIdx) => (
+                          <th key={hIdx} style={{ padding: "1.25rem 1.5rem", fontWeight: 800 }}>
+                            {header}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {post.content.table.rows.map((row, rIdx) => (
+                        <tr key={rIdx} style={{ 
+                          backgroundColor: rIdx % 2 === 0 ? "var(--surface-container-lowest)" : "var(--surface-container-low)",
+                          borderBottom: "1px solid var(--surface-container-highest)"
+                        }}>
+                          {row.map((cell, cIdx) => (
+                            <td key={cIdx} style={{ padding: "1rem 1.5rem", fontWeight: cIdx === 0 ? 700 : 400 }}>
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* Disclaimer Box */}
+            {post.content.disclaimer && (
+              <div style={{ 
+                backgroundColor: "var(--surface-container-low)", 
+                padding: "2rem", 
+                borderRadius: "1.5rem", 
+                borderLeft: "4px solid var(--status-caution)",
+                fontSize: "0.95rem",
+                opacity: 0.8,
+                lineHeight: 1.6,
+                marginBottom: "3rem"
+              }}>
+                <strong>Disclaimer:</strong> {post.content.disclaimer}
+              </div>
+            )}
+
           </div>
 
           {/* Download Banner Card */}
@@ -189,7 +313,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             padding: "3.5rem", 
             borderRadius: "2.5rem", 
             color: "white", 
-            marginTop: "5rem",
+            marginTop: "4rem",
             textAlign: "center"
           }}>
             <h3 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "1.25rem", color: "white" }}>
