@@ -38,11 +38,11 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "gluten-free-tax-secret-most-celiacs-never-use",
     title: "The Gluten-Free Tax Secret Most Celiacs Never Use (And It Could Save You Hundreds)",
-    excerpt: "Diagnosed with Celiac Disease? You buy gluten-free food every week and it costs more. Both the IRS in the US and CRA in Canada allow Celiacs to claim the extra price as a medical expense tax deduction. Here is how it works.",
+    excerpt: "Diagnosed with Celiac Disease? You buy gluten-free food every week and it costs more. Both the IRS in the US and CRA in Canada allow Celiacs to claim the extra price as a medical expense tax deduction. Here is how it works and how Celiac Scanner automates the math.",
     category: "Tax Savings & Health",
     author: "Celiac Scanner Team",
     date: "August 28, 2026",
-    readTime: "7 min read",
+    readTime: "8 min read",
     content: {
       introduction: "You have celiac disease. You buy gluten-free food every single week. And it costs more — a lot more — than regular food. Here's the part almost nobody tells you: some of that extra money can come back to you. Both the IRS in the United States and the CRA in Canada let people with a celiac disease diagnosis deduct part of their gluten-free food costs as a legitimate medical expense tax deduction. Most people just never claim it — because nobody explained it simply. So let's fix that.",
       sections: [
@@ -126,6 +126,28 @@ export const BLOG_POSTS: BlogPost[] = [
           ]
         },
         {
+          heading: "How Celiac Scanner Automates Receipt Tracking & Tax History",
+          body: "Manually keeping paper receipts in shoe boxes and typing price differences into spreadsheets takes dozens of hours each year. That's why we built the Celiac Scanner Receipt & Tax Deduction Tracker.",
+          subsections: [
+            {
+              subheading: "1. Instant Receipt OCR & Multimodal AI Scanning",
+              body: "Snap a quick photo of paper grocery store receipts (Target, Walmart, Whole Foods, Trader Joe's, Loblaws, Metro, etc.) or upload digital e-receipts. Celiac Scanner's Gemini AI reads every line item, automatically identifying certified gluten-free items."
+            },
+            {
+              subheading: "2. Automatic Benchmark Math & Incremental Calculation",
+              body: "No manual research required. The app automatically pairs each gluten-free purchase with standard item benchmark prices and computes your tax-deductible incremental savings instantly."
+            },
+            {
+              subheading: "3. Digital Receipt History & Monthly Tax Logs",
+              body: "Every scan is saved to your private Receipt History log. View running monthly totals, inspect itemized purchase breakdowns, and filter by store or date range at any time."
+            },
+            {
+              subheading: "4. One-Tap Audit-Ready Tax Exports",
+              body: "When tax season arrives, tap one button to generate a clean, itemized PDF tax summary report and CSV spreadsheet. Hand it directly to your CPA or upload it to TurboTax or H&R Block."
+            }
+          ]
+        },
+        {
           heading: "Is Celiac Disease a Disability? (And Does That Affect Taxes?)",
           body: "Under the Americans with Disabilities Act (ADA), Celiac Disease is recognized as a disability because it substantially limits digestion and eating. This guarantees rights to safe food accommodations in schools and workplaces.\n\nHowever, your ADA status and your tax deduction are two separate systems. Your gluten-free food tax deduction runs strictly on IRS and CRA medical-expense rules."
         },
@@ -134,10 +156,10 @@ export const BLOG_POSTS: BlogPost[] = [
           body: "Build this habit once and use it forever to protect your savings:",
           bulletPoints: [
             "1. Get your doctor's official diagnosis letter now.",
-            "2. Make one dedicated physical or digital folder for gluten-free receipts.",
-            "3. Snap a photo of every gluten-free grocery receipt.",
-            "4. Log purchases monthly rather than waiting until tax deadline day.",
-            "5. Ask your CPA or tax preparer whether your total medical expenses clear the AGI threshold."
+            "2. Open Celiac Scanner and navigate to the Receipt Scanner tool.",
+            "3. Snap a photo of every gluten-free grocery receipt right after shopping.",
+            "4. Review your automatic Receipt History log and monthly deduction total.",
+            "5. Export your itemized PDF/CSV tax report at filing time for your tax preparer."
           ]
         }
       ],
@@ -150,14 +172,14 @@ export const BLOG_POSTS: BlogPost[] = [
           ["Income threshold", "Must exceed 7.5% of AGI", "Annual minimum CRA threshold"],
           ["Requirement", "Must itemize on Schedule A", "Claimed as credit with summary log"],
           ["Shared households", "No explicit splitting rule", "Must split cost by portion actually eaten"],
-          ["Available since", "Decades of IRS guidance", "2003 tax year"]
+          ["Automated Tracking", "Celiac Scanner AI Receipt Log", "Celiac Scanner AI Receipt Log"]
         ]
       },
       takeaways: [
         "A doctor's formal Celiac diagnosis letter is mandatory for IRS and CRA claims.",
         "You deduct the price difference (incremental cost) between GF and regular items.",
-        "You can deduct 100% of the cost for specialty items with no regular equivalent (like xanthan gum) and online shipping.",
-        "Celiac Scanner's Receipt Scanner automates receipt OCR, price benchmarking, and tax summary exports."
+        "Celiac Scanner's new Receipt Scanner automatically parses receipts, calculates price differences, and logs receipt history.",
+        "Export audit-ready PDF and CSV reports for your accountant or tax software in one tap."
       ],
       disclaimer: "This article is educational only and is not tax or legal advice. Tax rules and thresholds change every year. Consult a qualified tax professional, and check current IRS Publication 502 or CRA Medical Expenses guidance, before filing."
     }
