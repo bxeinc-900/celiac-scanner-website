@@ -160,6 +160,18 @@ export default function Home() {
                 </p>
              </div>
              
+             {/* 3. Gluten-Free Receipt & Tax Deduction Scanner */}
+             <div className="card-lifted" style={{ display: "flex", flexDirection: "column", gap: "1.5rem", border: "2px solid var(--primary)", position: "relative" }}>
+                <span style={{ position: "absolute", top: "-12px", right: "1.5rem", backgroundColor: "var(--primary)", color: "white", padding: "2px 10px", borderRadius: "10px", fontSize: "0.75rem", fontWeight: 800, textTransform: "uppercase" }}>NEW UPDATE 🧾</span>
+                <div style={{ width: "60px", height: "60px", borderRadius: "50%", backgroundColor: "rgba(178, 172, 136, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px" }}>
+                   <span className="material-symbols-outlined" style={{ fontSize: "2rem", color: "var(--primary)" }}>receipt_long</span>
+                </div>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>3. Gluten-Free Receipt & Tax Deduction Scanner</h3>
+                <p style={{ opacity: 0.7, lineHeight: 1.7 }}>
+                  Diagnosed with Celiac Disease? Both the <strong>US IRS (Revenue Ruling 2000-24)</strong> and <strong>Canada CRA (Medical Expense Tax Credit)</strong> allow you to claim the extra cost of gluten-free groceries. Snap a photo of your receipt to automatically compute price differences and export ready-to-file tax logs.
+                </p>
+             </div>
+
              {/* 4. Amazon Safe Swap */}
              <div className="card-lifted" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                 <div style={{ width: "60px", height: "60px", borderRadius: "50%", backgroundColor: "rgba(178, 172, 136, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px" }}>
@@ -181,6 +193,48 @@ export default function Home() {
                   Our restaurant finder uses AI to <strong>scan Yelp and Google Maps reviews for crucial keywords like "cross-contamination" or "knowledgeable staff,"</strong> helping you discover dedicated gluten-free kitchens and highly-vetted local spots instantly.
                 </p>
              </div>
+          </div>
+
+          {/* Dedicated Receipt Tax Feature Banner */}
+          <div className="card-lifted bg-brand-gradient" style={{ borderRadius: "2.5rem", padding: "3.5rem", color: "white" }}>
+            <div className="responsive-grid" style={{ alignItems: "center", gap: "3rem" }}>
+              <div>
+                <span style={{ backgroundColor: "rgba(255,255,255,0.2)", padding: "0.4rem 1rem", borderRadius: "1rem", fontSize: "0.8rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em", display: "inline-block", marginBottom: "1.5rem" }}>
+                  US (IRS) & Canada (CRA) Compliant 🇺🇸 🇨🇦
+                </span>
+                <h3 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, marginBottom: "1.5rem", lineHeight: 1.15, color: "white" }}>
+                  Turn Grocery Receipts into Real Tax Deductions
+                </h3>
+                <p style={{ fontSize: "1.15rem", opacity: 0.9, lineHeight: 1.7, marginBottom: "2rem", color: "white" }}>
+                  Gluten-free groceries cost up to 300% more than regular items. If you are diagnosed with Celiac Disease, you can deduct the price difference on your annual tax return. Celiac Scanner's AI reads your receipts, calculates incremental costs automatically, and exports CPA-ready logs.
+                </p>
+                <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
+                  <Link href="/blog/gluten-free-tax-deductions-us-canada-guide" style={{ backgroundColor: "white", color: "var(--on-surface)", padding: "0.85rem 1.75rem", borderRadius: "1rem", fontWeight: 800, textDecoration: "none", fontSize: "0.95rem" }}>
+                    Read Celiac Tax Guide
+                  </Link>
+                  <Link href="/features" style={{ border: "2px solid rgba(255,255,255,0.4)", color: "white", padding: "0.85rem 1.75rem", borderRadius: "1rem", fontWeight: 800, textDecoration: "none", fontSize: "0.95rem" }}>
+                    Explore Receipt Scanner Features
+                  </Link>
+                </div>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", backgroundColor: "rgba(255,255,255,0.1)", padding: "2rem", borderRadius: "1.5rem", backdropFilter: "blur(10px)" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid rgba(255,255,255,0.2)", paddingBottom: "0.75rem" }}>
+                  <span style={{ fontWeight: 700 }}>Certified GF Bread</span>
+                  <span style={{ fontWeight: 800 }}>$6.99</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid rgba(255,255,255,0.2)", paddingBottom: "0.75rem", opacity: 0.85, fontSize: "0.9rem" }}>
+                  <span>Standard Bread Benchmark</span>
+                  <span>-$2.49</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", color: "#a7f3d0", fontWeight: 800, fontSize: "1.1rem" }}>
+                  <span>Tax Deductible Amount</span>
+                  <span>+$4.50</span>
+                </div>
+                <p style={{ fontSize: "0.8rem", opacity: 0.75, margin: 0, paddingTop: "0.5rem" }}>
+                  * Calculated under IRS Rev. Rul. 2000-24 & CRA METC guidelines.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

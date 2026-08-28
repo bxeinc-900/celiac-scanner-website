@@ -125,6 +125,79 @@ export default function Features() {
         </div>
       </section>
 
+      {/* NEW FEATURE: Receipt Scanner & Tax Deduction Hub */}
+      <section className="section-padding" style={{ backgroundColor: "var(--surface-container-low)" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "5rem" }}>
+            <span style={{ fontSize: "0.875rem", fontWeight: 800, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.15em", display: "block", marginBottom: "1rem" }}>
+              Medical Expense Tax Deductions
+            </span>
+            <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 800, marginBottom: "1.5rem", lineHeight: 1.15 }}>
+              Gluten-Free Receipt Scanner & <br/><span style={{ color: "var(--primary)" }}>US/Canada Tax Deduction Tracker</span>
+            </h2>
+            <p style={{ fontSize: "1.2rem", opacity: 0.8, maxWidth: "750px", margin: "0 auto", lineHeight: 1.7 }}>
+              Both the <strong>US IRS (Revenue Ruling 2000-24)</strong> and <strong>Canada Revenue Agency (METC)</strong> allow diagnosed Celiac individuals to claim the price difference of gluten-free groceries as a medical expense. Celiac Scanner automates the receipt tracking process.
+            </p>
+          </div>
+
+          <div className="responsive-grid" style={{ gap: "3rem", marginBottom: "4rem" }}>
+            
+            <div className="card-lifted" style={{ padding: "3.5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+              <div style={{ backgroundColor: "rgba(178, 172, 136, 0.2)", width: "64px", height: "64px", borderRadius: "1.25rem", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "2rem" }}>
+                <span className="material-symbols-outlined" style={{ fontSize: "2.25rem", color: "var(--primary)" }}>receipt_long</span>
+              </div>
+              <h3 style={{ fontSize: "1.85rem", fontWeight: 800, marginBottom: "1.25rem" }}>AI Receipt Parsing</h3>
+              <p style={{ opacity: 0.75, lineHeight: 1.7, fontSize: "1.05rem", marginBottom: "1.5rem" }}>
+                Snap paper receipts or upload digital store receipts from Target, Walmart, Whole Foods, Loblaws, Metro, or local grocery stores. Gemini AI reads each line item and identifies certified gluten-free purchases automatically.
+              </p>
+              <ul style={{ margin: 0, paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.75rem", opacity: 0.85, fontSize: "0.95rem" }}>
+                <li>Supports paper receipts and digital receipts.</li>
+                <li>Extracts individual item names, quantities, and prices.</li>
+              </ul>
+            </div>
+
+            <div className="card-lifted" style={{ padding: "3.5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+              <div style={{ backgroundColor: "rgba(178, 172, 136, 0.2)", width: "64px", height: "64px", borderRadius: "1.25rem", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "2rem" }}>
+                <span className="material-symbols-outlined" style={{ fontSize: "2.25rem", color: "var(--primary)" }}>calculate</span>
+              </div>
+              <h3 style={{ fontSize: "1.85rem", fontWeight: 800, marginBottom: "1.25rem" }}>Incremental Cost Math</h3>
+              <p style={{ opacity: 0.75, lineHeight: 1.7, fontSize: "1.05rem", marginBottom: "1.5rem" }}>
+                Tax authorities require you to deduct only the price premium of gluten-free items over regular items. Celiac Scanner matches standard item prices automatically to compute your tax deduction savings.
+              </p>
+              <ul style={{ margin: 0, paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.75rem", opacity: 0.85, fontSize: "0.95rem" }}>
+                <li>Compliant with US IRS Pub 502 & Schedule A itemized deductions.</li>
+                <li>Compliant with Canada CRA Medical Expense Tax Credit (METC).</li>
+              </ul>
+            </div>
+
+            <div className="card-lifted" style={{ padding: "3.5rem", backgroundColor: "var(--surface-container-lowest)" }}>
+              <div style={{ backgroundColor: "rgba(178, 172, 136, 0.2)", width: "64px", height: "64px", borderRadius: "1.25rem", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "2rem" }}>
+                <span className="material-symbols-outlined" style={{ fontSize: "2.25rem", color: "var(--primary)" }}>ios_share</span>
+              </div>
+              <h3 style={{ fontSize: "1.85rem", fontWeight: 800, marginBottom: "1.25rem" }}>One-Tap Tax Export</h3>
+              <p style={{ opacity: 0.75, lineHeight: 1.7, fontSize: "1.05rem", marginBottom: "1.5rem" }}>
+                No more shoe boxes full of receipts. At tax time, generate clean PDF summaries and CSV spreadsheets formatted for your CPA, TurboTax, H&R Block, or tax filing software.
+              </p>
+              <ul style={{ margin: 0, paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.75rem", opacity: 0.85, fontSize: "0.95rem" }}>
+                <li>Generates itemized receipt logs with totals.</li>
+                <li>Keep records stored safely on your phone for audit protection.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div style={{ textAlign: "center" }}>
+            <Link 
+              href="/blog/gluten-free-tax-deductions-us-canada-guide" 
+              className="btn-primary" 
+              style={{ padding: "1rem 2.5rem", fontSize: "1rem" }}
+            >
+              Read Full US & Canada Tax Deduction Guide
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Wanderlust Without Worry */}
       <section className="section-padding" style={{ backgroundColor: "var(--on-surface)", color: "white" }}>
         <div className="container" style={{ maxWidth: "900px", textAlign: "center" }}>

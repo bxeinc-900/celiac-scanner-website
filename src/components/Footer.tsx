@@ -24,6 +24,7 @@ export default function Footer() {
             <Link href="/" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Home</Link>
             <Link href="/how-it-works" style={{ fontSize: "0.875rem", opacity: 0.7 }}>How It Works</Link>
             <Link href="/features" style={{ fontSize: "0.875rem", opacity: 0.7 }}>App Features</Link>
+            <Link href="/blog" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Blog & Tax Guides</Link>
             <Link href="/about" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Our Story</Link>
             <Link href="/legal" style={{ fontSize: "0.875rem", opacity: 0.7 }}>Legal Rules</Link>
           </div>
