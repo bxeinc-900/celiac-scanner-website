@@ -306,6 +306,10 @@ function json(status: number, data: unknown): Response {
 // ─── Handler ──────────────────────────────────────────────────────────────────
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
+  // One JSON log line per request (read with `wrangler pages deployment tail`).
+  // Times in ms; imageKB is the decoded image size.
+  const t0 = Date.now();
+  const timing: Record<string, unknown> = { evt: 'gemini_timing' };
   try {
     if (!env.GEMINI_API_KEY || !env.RATE_KV) {
       console.error('[gemini] Missing GEMINI_API_KEY or RATE_KV binding');
@@ -313,30 +317,51 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     }
 
     const uid = await verifyFirebaseUser(request);
+    timing.authMs = Date.now() - t0;
     const body = await request.json().catch(() => {
       throw new HttpError(400, 'Invalid request');
     });
+    timing.task = body?.task;
+    if (typeof body?.image === 'string') timing.imageKB = Math.round((body.image.length * 3) / 4 / 1024);
     const geminiRequest = buildGeminiRequest(body);
     await enforceDailyLimits(env, uid);
+    timing.preGeminiMs = Date.now() - t0;
 
+    const tGemini = Date.now();
     const res = await fetch(GEMINI_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
       body: JSON.stringify(geminiRequest),
     });
     if (!res.ok) {
+      timing.geminiMs = Date.now() - tGemini;
       console.error(`[gemini] Upstream ${res.status}: ${(await res.text()).slice(0, 500)}`);
       throw new HttpError(502, 'The scanner service had a problem. Please try again.');
     }
 
     const data: any = await res.json();
+    timing.geminiMs = Date.now() - tGemini;
+    const usage = data?.usageMetadata || {};
+    timing.tokens = {
+      prompt: usage.promptTokenCount,
+      output: usage.candidatesTokenCount,
+      thoughts: usage.thoughtsTokenCount,
+    };
     const text = (data?.candidates?.[0]?.content?.parts || [])
       .map((p: any) => (typeof p.text === 'string' ? p.text : ''))
       .join('');
+    timing.status = 200;
     return json(200, { text });
   } catch (err: any) {
-    if (err instanceof HttpError) return json(err.status, { error: err.message });
+    if (err instanceof HttpError) {
+      timing.status = err.status;
+      return json(err.status, { error: err.message });
+    }
+    timing.status = 500;
     console.error('[gemini] Unexpected error:', err?.message || err);
     return json(500, { error: 'The scanner service had a problem. Please try again.' });
+  } finally {
+    timing.totalMs = Date.now() - t0;
+    console.log(JSON.stringify(timing));
   }
 };
