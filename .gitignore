@@ -47,3 +47,6 @@ reference/
 # wrangler cache
 .wrangler/
 
+
+# Wrangler local secrets
+.dev.vars

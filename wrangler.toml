@@ -1,4 +1,4 @@
-name = "celiac-scanner"
+name = "celiac-scanner-website"
 compatibility_date = "2026-04-01"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "out"
@@ -6,3 +6,8 @@ pages_build_output_dir = "out"
 [[kv_namespaces]]
 binding = "ANALYTICS_KV"
 id = "177314a6192b473e8dcc8e26f7129bc0"
+
+# Per-user / global daily counters for functions/api/gemini.ts
+[[kv_namespaces]]
+binding = "RATE_KV"
+id = "ea8eb191af1142f4867464695b942421"
